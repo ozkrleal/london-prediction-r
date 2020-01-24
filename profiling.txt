@@ -1,0 +1,6 @@
+import pandas as pd
+from pandas_profiling import ProfileReport
+
+ab = pd.read_csv('data/airbnb_london_cleaned.csv', index_col=0)
+profile = ProfileReport(ab, title='Airbnb London')
+profile.to_file('data/london_report.html')
