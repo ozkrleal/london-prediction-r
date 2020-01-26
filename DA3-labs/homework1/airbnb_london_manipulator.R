@@ -335,16 +335,18 @@ for (i in 1:length(categoricals)) {
 # Change Infinite values with NaNs
 for (j in 1:ncol(data) ) data.table::set(data, which(is.infinite(data[[j]])), j, NA)
 
-write_csv(data, paste0(data_out, "airbnb_hackney_workfile_adj.csv"))
+saveRDS(data, "homework1/airbnb_hackney_workfile_adj.rds")
 
 #--------------------------------------------------------------------
 
-#create_report(data)
+colnames(data)
+
+create_report(data)
 
 ## check report html
 
-colnames(df)
+colnames(data)
 
-head(df)
+head(data)
 
 ##drop_columns(df, "")
