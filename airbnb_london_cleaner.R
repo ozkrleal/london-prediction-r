@@ -74,4 +74,4 @@ df<-df[ , !(names(df) %in% drops)]
 
 #write csv or RDS
 #write.csv(df,file="airbnb_london_cleaned.csv")
-saveRDS(df,file="airbnb_london_cleaned.csv")
+saveRDS(df,file="airbnb_london_cleaned.rds")
