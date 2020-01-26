@@ -1,0 +1,479 @@
+"area","subarea","name","condition","cylinders","drive","fuel","odometer","paintcolor","size","transmission","type","dealer","price","lnprice","year","age","lnodometer","LE","XLE","SE","cond_excellent","cond_good","cond_likenew","cylind6","agesq","agecu","odometersq"
+"chicago","chicago city","2015 Toyota_ Camry_","excellent","other","Missing","gas",3.5721,NA,NA,"automatic","sedan",1,14850,9.6057549,2015,3,1.2731537,0,0,0,1,0,0,0,9,27,12.75989841
+"chicago","chicago city","2016 TOYOTA CAMRY","Missing","Missing","fwd","gas",1.3152,NA,NA,"automatic","sedan",1,15630,9.6569471,2016,2,0.27398875,0,0,0,0,0,0,0,4,8,1.72975104
+"chicago","chicago city","1993 toyota camry","good","6 cylinders","fwd","gas",18.7,"red","full-size","automatic","sedan",0,850,6.7452364,1993,25,2.9285235,0,0,0,0,1,0,1,625,15625,349.69
+"chicago","chicago city","1998 toyota camry le","Missing","Missing","Missing","gas",16.8242588043213,NA,NA,"automatic","Missing",0,1600,7.377759,1998,20,2.8228219,1,0,0,0,0,0,0,400,8000,283.055684314782
+"chicago","chicago city","1998 Toyota Camry","Missing","Missing","Missing","gas",16.8242588043213,NA,NA,"automatic","Missing",0,1500,7.3132205,1998,20,2.8228219,0,0,0,0,0,0,0,400,8000,283.055684314782
+"chicago","chicago city","1999 toyota camry","good","4 cylinders","fwd","gas",20.2,NA,NA,"automatic","sedan",0,1650,7.4085307,1999,19,3.0056827,0,0,0,0,1,0,0,361,6859,408.04
+"chicago","chicago city","2000 toyota camry le","excellent","4 cylinders","fwd","gas",10.7,"white","mid-size","automatic","sedan",0,2295,7.7384882,2000,18,2.3702438,1,0,0,1,0,0,0,324,5832,114.49
+"chicago","chicago city","2002 toyota camry solara","Missing","6 cylinders","fwd","gas",16,"black",NA,"automatic","Missing",0,1650,7.4085307,2002,16,2.7725887,0,0,0,0,0,0,1,256,4096,256
+"chicago","chicago city","2002 toyota camry","Missing","Missing","Missing","gas",14.3267211914062,NA,NA,"automatic","Missing",0,3500,8.1605186,2002,16,2.6621263,0,0,0,0,0,0,0,256,4096,205.254940096289
+"chicago","chicago city","2003 Toyota CAMRY XLE","Missing","Missing","Missing","gas",14.0816717147827,"white",NA,"automatic","Missing",0,1100,7.0030656,2003,15,2.6448741,0,1,0,0,0,0,0,225,3375,198.293478282912
+"chicago","chicago city","2003 toyota camry","Missing","4 cylinders","Missing","gas",11.9,NA,NA,"automatic","Missing",0,3800,8.2427559,2003,15,2.4765384,0,0,0,0,0,0,0,225,3375,141.61
+"chicago","chicago city","2004 Toyota Camry XLE","excellent","4 cylinders","fwd","gas",16.7,NA,NA,"automatic","Missing",0,2950,7.9895606,2004,14,2.8154087,0,1,0,1,0,0,0,196,2744,278.89
+"chicago","chicago city","2005 toyota camry LE","excellent","6 cylinders","4wd","gas",12.0451,"grey","full-size","automatic","sedan",0,4200,8.3428402,2005,13,2.488658,1,0,0,1,0,0,1,169,2197,145.08443401
+"chicago","chicago city","2007 toyota camry","good","4 cylinders","fwd","gas",11.6269302368164,"silver","full-size","automatic","sedan",0,4500,8.4118328,2007,11,2.4533241,0,0,0,0,1,0,0,121,1331,135.185506731796
+"chicago","chicago city","2007 Toyota camry","Missing","Missing","Missing","gas",11.6269302368164,NA,NA,"automatic","Missing",0,4000,8.2940493,2007,11,2.4533241,0,0,0,0,0,0,0,121,1331,135.185506731796
+"chicago","chicago city","2007 Toyota Camry SE","excellent","4 cylinders","fwd","gas",10.2,"grey","mid-size","automatic","Missing",0,6000,8.6995144,2007,11,2.3223877,0,0,1,1,0,0,0,121,1331,104.04
+"chicago","chicago city","2007 toyota camry xle","Missing","Missing","Missing","gas",11.6269302368164,NA,NA,"automatic","Missing",0,5999,8.6993484,2007,11,2.4533241,0,1,0,0,0,0,0,121,1331,135.185506731796
+"chicago","chicago city","2008 toyota camry","Missing","4 cylinders","fwd","gas",6.58,NA,NA,"automatic","Missing",0,7700,8.9489756,2008,10,1.8840348,0,0,0,0,0,0,0,100,1000,43.2964
+"chicago","chicago city","2009 toyota camry se 4dr sedan","excellent","4 cylinders","fwd","gas",11.33,"grey","mid-size","automatic","sedan",0,7200,8.8818359,2009,9,2.427454,0,0,1,1,0,0,0,81,729,128.3689
+"chicago","chicago city","2009 toyota camry xle","excellent","Missing","Missing","gas",16.4503631591797,NA,NA,"automatic","Missing",0,6400,8.7640533,2009,9,2.8003476,0,1,0,1,0,0,0,81,729,270.614448068896
+"chicago","chicago city","2010 toyota camry le","Missing","Missing","Missing","gas",14.6639995574951,NA,NA,"automatic","Missing",0,2000,7.6009026,2010,8,2.6853955,1,0,0,0,0,0,0,64,512,215.032883022217
+"chicago","chicago city","2013 toyota camry","excellent","4 cylinders","Missing","gas",21.3,"white","compact","automatic","sedan",0,7000,8.8536654,2013,5,3.058707,0,0,0,1,0,0,0,25,125,453.69
+"chicago","chicago city","2014 Toyota Camry XLE","like new","4 cylinders","fwd","gas",4.1539,"silver","mid-size","automatic","sedan",0,14900,9.6091166,2014,4,1.4240477,0,1,0,0,0,1,0,16,64,17.25488521
+"chicago","chicago city","2009 Toyota Camry","like new","6 cylinders","fwd","gas",16.4503631591797,NA,NA,"automatic","sedan",0,2000,7.6009026,2009,9,2.8003476,0,0,0,0,0,1,1,81,729,270.614448068896
+"chicago","chicago city","2010 toyota camry xle","excellent","6 cylinders","fwd","gas",14.6639995574951,"black","full-size","automatic","sedan",0,3030,8.0163183,2010,8,2.6853955,0,1,0,1,0,0,1,64,512,215.032883022217
+"chicago","chicago city","2004 Toyota Camry","excellent","4 cylinders","Missing","gas",13.0756,"grey",NA,"automatic","sedan",0,3100,8.0391569,2004,14,2.5707479,0,0,0,1,0,0,0,196,2744,170.97131536
+"chicago","chicago city","2002 toyota camry le","like new","6 cylinders","Missing","gas",12.1,"grey",NA,"automatic","sedan",0,3600,8.1886892,2002,16,2.4932055,1,0,0,0,0,1,1,256,4096,146.41
+"chicago","chicago N","2002 toyota camry le 4cyl","good","4 cylinders","fwd","gas",17.3906,"blue","mid-size","automatic","sedan",0,3750,8.2295113,2002,16,2.8559299,1,0,0,0,1,0,0,256,4096,302.43296836
+"chicago","chicago N","2005 toyota camry","good","4 cylinders","fwd","gas",12.3,NA,NA,"automatic","sedan",0,4400,8.3893595,2005,13,2.5095992,0,0,0,0,1,0,0,169,2197,151.29
+"chicago","chicago N","2011 toyota camry se 4dr sedan","excellent","4 cylinders","fwd","gas",15.6,"black","full-size","automatic","sedan",0,6300,8.7483053,2011,7,2.7472708,0,0,1,1,0,0,0,49,343,243.36
+"chicago","chicago N","1998 Toyota Camry LE","good","Missing","Missing","gas",17.5626,"brown","mid-size","automatic","sedan",0,1700,7.4383836,1998,20,2.8657715,1,0,0,0,1,0,0,400,8000,308.44491876
+"chicago","chicago suburbs","1997 Toyota Camry","Missing","Missing","Missing","gas",18.7007999420166,NA,NA,"automatic","Missing",0,850,6.7452364,1997,21,2.9285662,0,0,0,0,0,0,0,441,9261,349.719918471328
+"chicago","chicago suburbs","2000 toyota camry","good","4 cylinders","fwd","gas",20.2,NA,"full-size","automatic","sedan",0,2000,7.6009026,2000,18,3.0056827,0,0,0,0,1,0,0,324,5832,408.04
+"chicago","chicago suburbs","2001 toyota camry","like new","Missing","Missing","gas",16.4,NA,NA,"automatic","Missing",0,2250,7.7186856,2001,17,2.7972813,0,0,0,0,0,1,0,289,4913,268.96
+"chicago","chicago suburbs","2006 Toyota Camry Solara","good","4 cylinders","fwd","gas",18.5,"blue","mid-size","automatic","coupe",0,2500,7.8240461,2006,12,2.9177706,0,0,0,0,1,0,0,144,1728,342.25
+"chicago","chicago suburbs","2010 toyota camry le","excellent","4 cylinders","fwd","gas",14.6639995574951,"silver","mid-size","automatic","sedan",0,7500,8.922658,2010,8,2.6853955,1,0,0,1,0,0,0,64,512,215.032883022217
+"chicago","chicago suburbs","2012 TOYOTA CAMRY","good","4 cylinders","fwd","gas",7.5294,"red",NA,"automatic","Missing",0,10590,9.2676659,2012,6,2.0188153,0,0,0,0,1,0,0,36,216,56.69186436
+"chicago","chicago suburbs","2002 toyota camry Le","excellent","4 cylinders","fwd","gas",10.5,"silver",NA,"automatic","sedan",0,2800,7.9373746,2002,16,2.3513753,0,0,0,1,0,0,0,256,4096,110.25
+"chicago","chicago suburbs","2002 toyota camry","excellent","4 cylinders","fwd","gas",10.5,"silver",NA,"automatic","Missing",0,2800,7.9373746,2002,16,2.3513753,0,0,0,1,0,0,0,256,4096,110.25
+"chicago","chicago suburbs","1998 Toyota Camry LX","excellent","6 cylinders","fwd","gas",15.88,"brown","compact","automatic","sedan",0,1850,7.5229411,1998,20,2.7650604,0,0,0,1,0,0,1,400,8000,252.1744
+"chicago","chicago suburbs","1998 Toyota Camry LX","good","6 cylinders","fwd","gas",15.88,"brown","compact","automatic","sedan",0,1850,7.5229411,1998,20,2.7650604,0,0,0,0,1,0,1,400,8000,252.1744
+"chicago","chicago suburbs","2008 toyota camry le","excellent","4 cylinders","rwd","gas",10.9,"black","full-size","automatic","sedan",0,6500,8.7795572,2008,10,2.3887627,1,0,0,1,0,0,0,100,1000,118.81
+"chicago","indiana NW","2005 Toyota Camry XLE","good","6 cylinders","fwd","gas",16.5,"silver","mid-size","automatic","Missing",0,2400,7.7832241,2005,13,2.8033605,0,1,0,0,1,0,1,169,2197,272.25
+"chicago","indiana NW","2005 toyota camry le","good","4 cylinders","fwd","gas",15.8,"grey","full-size","automatic","sedan",0,3950,8.2814713,2005,13,2.76001,1,0,0,0,1,0,0,169,2197,249.64
+"chicago","chicago S","1997 toyota camry","excellent","6 cylinders","4wd","gas",10.148,NA,NA,"automatic","sedan",1,3985,8.2902927,1997,21,2.3172767,0,0,0,1,0,0,1,441,9261,102.981904
+"chicago","chicago S","1999 toyota camry","Missing","Missing","Missing","gas",17.0199184417725,NA,NA,"automatic","Missing",0,2000,7.6009026,1999,19,2.8343844,0,0,0,0,0,0,0,361,6859,289.677623764586
+"chicago","chicago S","2000 toyota camry xle","excellent","6 cylinders","fwd","gas",16.7,"black","compact","automatic","sedan",0,1400,7.2442274,2000,18,2.8154087,0,1,0,1,0,0,1,324,5832,278.89
+"chicago","chicago S","2001 Toyota Camry","Missing","Missing","Missing","gas",11.3159,NA,NA,"automatic","Missing",0,3980,8.2890368,2001,17,2.4262087,0,0,0,0,0,0,0,289,4913,128.04959281
+"chicago","chicago S","2011 toyota camry","Missing","Missing","Missing","gas",10.3230476379394,NA,NA,"automatic","Missing",0,6500,8.7795572,2011,7,2.334379,0,0,0,0,0,0,0,49,343,106.565312535167
+"chicago","chicago S","2008 toyota camry","Missing","Missing","Missing","gas",12.5481119155884,"red",NA,"automatic","Missing",0,8900,9.0938063,2008,10,2.5295701,0,0,0,0,0,0,0,100,1000,157.455112646131
+"chicago","chicago S","1999 Toyota camry","Missing","Missing","Missing","gas",17.0199184417725,NA,NA,"automatic","Missing",0,2000,7.6009026,1999,19,2.8343844,0,0,0,0,0,0,0,361,6859,289.677623764586
+"chicago","chicago W","2000 Toyota_ Camry_","excellent","4 cylinders","fwd","gas",16.6457,"grey","mid-size","automatic","sedan",1,2400,7.7832241,2000,18,2.8121519,0,0,0,1,0,0,0,324,5832,277.07932849
+"chicago","chicago W","2009 toyota camry le","like new","4 cylinders","fwd","gas",13.2572,"silver","full-size","automatic","sedan",1,5999,8.6993484,2009,9,2.5845408,1,0,0,0,0,1,0,81,729,175.75335184
+"chicago","chicago W","2011 toyota camry xle","excellent","6 cylinders","fwd","gas",9.0653,"green","full-size","automatic","sedan",1,9300,9.1377697,2011,7,2.2044539,0,1,0,1,0,0,1,49,343,82.17966409
+"chicago","chicago W","2013 Toyota_ Camry_","excellent","4 cylinders","fwd","gas",6.2628,"grey","mid-size","automatic","sedan",1,10500,9.2591305,2013,5,1.8346274,0,0,0,1,0,0,0,25,125,39.22266384
+"chicago","chicago W","2016 Toyota_ Camry_","excellent","4 cylinders","fwd","gas",5.2482,"black","mid-size","automatic","sedan",1,12900,9.464983,2016,2,1.6578852,0,0,0,1,0,0,0,4,8,27.54360324
+"chicago","chicago W","2004 Toyota camry","Missing","Missing","Missing","gas",15.4080457687378,NA,NA,"automatic","Missing",0,3300,8.1016779,2004,14,2.7348897,0,0,0,0,0,0,0,196,2744,237.407874411518
+"chicago","chicago W","2004 toyota camry le 4dr sedan","excellent","4 cylinders","fwd","gas",10.5,"silver","mid-size","automatic","sedan",0,4400,8.3893595,2004,14,2.3513753,1,0,1,1,0,0,0,196,2744,110.25
+"chicago","chicago W","2010 TOYOTA CAMRY","Missing","Missing","Missing","gas",14.6639995574951,NA,NA,"automatic","Missing",0,2074,7.6372342,2010,8,2.6853955,0,0,0,0,0,0,0,64,512,215.032883022217
+"chicago","chicago W","2000 TOYOTA CAMRY","Missing","4 cylinders","Missing","gas",16.8334579467773,NA,NA,"automatic","Missing",0,800,6.6846118,2000,18,2.8233685,0,0,0,0,0,0,0,324,5832,283.365306445921
+"chicago","chicago W","2002 Toyota Camry Solara","excellent","Missing","Missing","gas",7.7734,NA,NA,"automatic","Missing",0,5985,8.6970119,2002,16,2.0507076,0,0,0,1,0,0,0,256,4096,60.42574756
+"chicago","chicago W","2002 Toyota Camry XLE","excellent","4 cylinders","fwd","gas",13.8,"silver",NA,"automatic","sedan",0,5300,8.5754623,2002,16,2.6246686,0,1,0,1,0,0,0,256,4096,190.44
+"chicago","chicago W","2003 Toyota Camry","good","4 cylinders","fwd","gas",21.8,"grey",NA,"automatic","Missing",0,2700,7.9010072,2003,15,3.0819099,0,0,0,0,1,0,0,225,3375,475.24
+"chicago","chicago W","2004 toyota camry solara","good","6 cylinders","fwd","gas",16.8,"red","compact","automatic","coupe",0,3600,8.1886892,2004,14,2.8213789,0,0,0,0,1,0,1,196,2744,282.24
+"chicago","chicago W","2008 toyota camry","excellent","4 cylinders","fwd","gas",17.7,"grey",NA,"automatic","sedan",0,5250,8.5659838,2008,10,2.8735647,0,0,0,1,0,0,0,100,1000,313.29
+"chicago","chicago W","2009 toyota camry","excellent","4 cylinders","fwd","gas",12.85,"black",NA,"automatic","sedan",0,6750,8.8172979,2009,9,2.5533438,0,0,0,1,0,0,0,81,729,165.1225
+"chicago","chicago W","2012 toyota camry se 4dr sedan","excellent","4 cylinders","fwd","gas",10.5,"white","full-size","automatic","sedan",0,9995,9.2098398,2012,6,2.3513753,0,0,1,1,0,0,0,36,216,110.25
+"chicago","chicago W","1994 Toyota Camry","Missing","Missing","Missing","gas",13.8,NA,NA,"automatic","Missing",0,1300,7.1701198,1994,24,2.6246686,0,0,0,0,0,0,0,576,13824,190.44
+"chicago","chicago W","2010 TOYOTA CAMRY","Missing","Missing","Missing","gas",14.6639995574951,NA,NA,"automatic","Missing",0,2071,7.635787,2010,8,2.6853955,0,0,0,0,0,0,0,64,512,215.032883022217
+"chicago","chicago W","1993 toyota camry","good","6 cylinders","fwd","gas",15.1,NA,NA,"automatic","Missing",0,1300,7.1701198,1993,25,2.7146947,0,0,0,0,1,0,1,625,15625,228.01
+"chicago","chicago S","1999 TOYOTA CAMRY","Missing","4 cylinders","Missing","gas",13.9745,"white",NA,"automatic","sedan",1,2799,7.9370174,1999,19,2.6372342,0,0,0,0,0,0,0,361,6859,195.28665025
+"chicago","chicago N","1997 Toyota Camry","Missing","Missing","Missing","gas",18.7007999420166,NA,NA,"automatic","Missing",0,2800,7.9373746,1997,21,2.9285662,0,0,0,0,0,0,0,441,9261,349.719918471328
+"chicago","chicago city","1993 Toyota Camry","Missing","Missing","Missing","gas",21.9166660308838,NA,NA,"automatic","Missing",0,2200,7.6962128,1993,25,3.0872474,0,0,0,0,0,0,0,625,15625,480.340249909295
+"chicago","chicago W","2009 toyota camry","excellent","4 cylinders","fwd","gas",12.85,"black",NA,"automatic","sedan",0,7250,8.8887568,2009,9,2.5533438,0,0,0,1,0,0,0,81,729,165.1225
+"chicago","indiana NW","2017 Toyota Camry SE","Missing","Missing","Missing","gas",1.87281668186188,NA,NA,"automatic","Missing",1,16900,9.7350693,2017,1,0.62744355,0,0,1,0,0,0,0,1,1,3.50744232386013
+"chicago","indiana NW","1998 1998 TOYOTA CAMRY","Missing","Missing","Missing","gas",16.8242588043213,NA,NA,"automatic","Missing",0,1600,7.377759,1998,20,2.8228219,0,0,0,0,0,0,0,400,8000,283.055684314782
+"chicago","chicago W","2001 toyota camry","good","4 cylinders","fwd","gas",14.6,"silver","mid-size","automatic","sedan",0,2200,7.6962128,2001,17,2.6810215,0,0,0,0,1,0,0,289,4913,213.16
+"chicago","chicago N","1993 Toyota Camry XLE V6","Missing","Missing","Missing","gas",21.9166660308838,"black",NA,"automatic","sedan",0,2700,7.9010072,1993,25,3.0872474,0,1,0,0,0,0,0,625,15625,480.340249909295
+"chicago","chicago city","1998 toyota camry","Missing","Missing","Missing","gas",16.8242588043213,NA,NA,"automatic","Missing",0,1600,7.377759,1998,20,2.8228219,0,0,0,0,0,0,0,400,8000,283.055684314782
+"chicago","chicago city","2007 toyota camry","Missing","6 cylinders","fwd","gas",11.6269302368164,"grey","full-size","automatic","Missing",0,1500,7.3132205,2007,11,2.4533241,0,0,0,0,0,0,1,121,1331,135.185506731796
+"chicago","chicago N","2002 toyota camry le 4cyl","good","4 cylinders","fwd","gas",17.3906,"blue","mid-size","automatic","sedan",0,3550,8.1747026,2002,16,2.8559299,1,0,0,0,1,0,0,256,4096,302.43296836
+"chicago","chicago city","2004 TOYOTA CAMRY LE","excellent","4 cylinders","fwd","gas",11.9,"white",NA,"automatic","sedan",0,3200,8.0709057,2004,14,2.4765384,1,0,0,1,0,0,0,196,2744,141.61
+"chicago","chicago W","2002 toyota camry","good","6 cylinders","fwd","gas",17.5,"green","mid-size","automatic","sedan",0,3200,8.0709057,2002,16,2.862201,0,0,0,0,1,0,1,256,4096,306.25
+"chicago","chicago S","2015 toyota camry le","good","4 cylinders","fwd","gas",6.0215,"grey",NA,"automatic","Missing",0,14000,9.546813,2015,3,1.7953364,1,0,0,0,1,0,0,9,27,36.25846225
+"chicago","indiana NW","2007 Toyota Camry","good","Missing","Missing","gas",13,NA,NA,"automatic","Missing",0,5800,8.6656132,2007,11,2.5649493,0,0,0,0,1,0,0,121,1331,169
+"chicago","chicago suburbs","2003 TOYOTA CAMRY LE","Missing","Missing","Missing","gas",6.5756,NA,NA,"automatic","Missing",0,6929,8.8434706,2003,15,1.8833659,1,0,0,0,0,0,0,225,3375,43.23851536
+"chicago","chicago W","2000 toyota camry solara","Missing","Missing","Missing","gas",16.8334579467773,NA,NA,"automatic","Missing",0,1900,7.5496092,2000,18,2.8233685,0,0,0,0,0,0,0,324,5832,283.365306445921
+"chicago","chicago N","1993 Toyota Camry XLE V6","Missing","Missing","Missing","gas",21.9166660308838,NA,NA,"automatic","Missing",0,2700,7.9010072,1993,25,3.0872474,0,1,0,0,0,0,0,625,15625,480.340249909295
+"chicago","chicago N","1993 Toyota Camry","Missing","Missing","Missing","gas",21.9166660308838,NA,NA,"automatic","Missing",0,2200,7.6962128,1993,25,3.0872474,0,0,0,0,0,0,0,625,15625,480.340249909295
+"chicago","indiana NW","2011 Toyota Camry","Missing","Missing","Missing","gas",10.3230476379394,NA,NA,"automatic","Missing",0,8300,9.0240107,2011,7,2.334379,0,0,0,0,0,0,0,49,343,106.565312535167
+"chicago","chicago city","2008 Toyota camry","Missing","Missing","Missing","gas",8.5,NA,NA,"automatic","Missing",0,7700,8.9489756,2008,10,2.1400661,0,0,0,0,0,0,0,100,1000,72.25
+"chicago","chicago city","2011 Toyota Camry","Missing","Missing","Missing","gas",10.3230476379394,NA,NA,"automatic","Missing",0,8300,9.0240107,2011,7,2.334379,0,0,0,0,0,0,0,49,343,106.565312535167
+"chicago","chicago S","2017 toyota camry","excellent","4 cylinders","4wd","gas",0.2319,NA,NA,"automatic","sedan",1,18495,9.8252554,2017,1,-1.461449,0,0,0,1,0,0,0,1,1,0.05377761
+"chicago","chicago S","2010 TOYOTA CAMRY","Missing","Missing","Missing","gas",14.6639995574951,NA,NA,"automatic","Missing",0,2069,7.6348205,2010,8,2.6853955,0,0,0,0,0,0,0,64,512,215.032883022217
+"chicago","chicago N","2005 toyota camry","excellent","4 cylinders","fwd","gas",12.3,NA,"full-size","automatic","sedan",0,4400,8.3893595,2005,13,2.5095992,0,0,0,1,0,0,0,169,2197,151.29
+"chicago","chicago city","2004 Toyota Camry","good","4 cylinders","Missing","gas",13.6559,"black",NA,"automatic","sedan",0,3900,8.2687321,2004,14,2.6141717,0,0,0,0,1,0,0,196,2744,186.48360481
+"chicago","chicago N","2002 toyota camry solara convertible","good","6 cylinders","Missing","gas",10.3245,NA,NA,"automatic","Missing",0,4500,8.4118328,2002,16,2.3345196,0,0,0,0,1,0,1,256,4096,106.59530025
+"chicago","chicago S","2007 toyota camry solara","excellent","4 cylinders","fwd","gas",15.9,"silver",NA,"automatic","coupe",0,4500,8.4118328,2007,11,2.766319,0,0,0,1,0,0,0,121,1331,252.81
+"chicago","chicago city","1998 toyota camry","Missing","Missing","Missing","gas",16.8242588043213,NA,NA,"automatic","Missing",0,1500,7.3132205,1998,20,2.8228219,0,0,0,0,0,0,0,400,8000,283.055684314782
+"chicago","chicago W","2015 Toyota Camry","Missing","4 cylinders","fwd","gas",4.96,"white",NA,"automatic","sedan",1,14491,9.5812826,2015,3,1.6014057,0,0,0,0,0,0,0,9,27,24.6016
+"chicago","indiana NW","2005 toyota camry le","good","4 cylinders","fwd","gas",15.8,"grey","full-size","automatic","sedan",0,3700,8.2160883,2005,13,2.76001,1,0,0,0,1,0,0,169,2197,249.64
+"chicago","indiana NW","2004 Toyota camry","Missing","Missing","Missing","gas",15.4080457687378,NA,NA,"automatic","Missing",0,1500,7.3132205,2004,14,2.7348897,0,0,0,0,0,0,0,196,2744,237.407874411518
+"chicago","chicago suburbs","2009 Toyota Camry","Missing","4 cylinders","fwd","gas",11.8068,"black","mid-size","automatic","sedan",1,6499,8.7794037,2009,9,2.4686756,0,0,0,0,0,0,0,81,729,139.40052624
+"chicago","chicago city","2007 toyota camry le","excellent","4 cylinders","fwd","gas",11.6269302368164,"blue","mid-size","automatic","Missing",1,9995,9.2098398,2007,11,2.4533241,1,0,0,1,0,0,0,121,1331,135.185506731796
+"chicago","chicago suburbs","2012 Toyota Camry","Missing","4 cylinders","fwd","gas",8.0504,"silver","mid-size","automatic","sedan",1,11386,9.3401394,2012,6,2.0857217,0,0,0,0,0,0,0,36,216,64.80894016
+"chicago","chicago W","2015 Toyota Camry","Missing","4 cylinders","fwd","gas",6.1448,"black","mid-size","automatic","sedan",1,13906,9.5400753,2015,3,1.8156062,0,0,0,0,0,0,0,9,27,37.75856704
+"chicago","chicago S","2006 toyota camry solara convertible","excellent","6 cylinders","fwd","gas",14,"silver","mid-size","automatic","convertible",0,4950,8.507143,2006,12,2.6390574,0,0,0,1,0,0,1,144,1728,196
+"chicago","chicago W","2007 toyota camry le","excellent","4 cylinders","fwd","gas",14.55,"yellow",NA,"automatic","sedan",0,5390,8.5923004,2007,11,2.6775911,1,0,0,1,0,0,0,121,1331,211.7025
+"chicago","chicago city","1998 toyota camry","good","Missing","fwd","gas",16.8242588043213,"green","full-size","automatic","sedan",1,1800,7.495542,1998,20,2.8228219,0,0,0,0,1,0,0,400,8000,283.055684314782
+"chicago","chicago suburbs","2009 Toyota Camry SE","good","4 cylinders","fwd","gas",12.4,"red","mid-size","automatic","sedan",0,6995,8.852951,2009,9,2.5176964,0,0,1,0,1,0,0,81,729,153.76
+"chicago","chicago city","2005 toyota camry le","good","4 cylinders","fwd","gas",12.1,"silver","full-size","automatic","sedan",0,6000,8.6995144,2005,13,2.4932055,1,0,0,0,1,0,0,169,2197,146.41
+"chicago","chicago S","2014 toyota camry","excellent","4 cylinders","4wd","gas",3.9298,"white",NA,"automatic","sedan",1,13995,9.5464554,2014,4,1.3685886,0,0,0,1,0,0,0,16,64,15.44332804
+"chicago","chicago city","2008 Toyota_ Camry_ Solara_","excellent","6 cylinders","fwd","gas",15.5386,"black","sub-compact","automatic","convertible",1,4900,8.4969902,2008,10,2.7433271,0,0,0,1,0,0,1,100,1000,241.44808996
+"chicago","chicago W","2007 Toyota Camry","excellent","4 cylinders","fwd","gas",11.5515,"silver","mid-size","automatic","sedan",1,6490,8.778018,2007,11,2.4468153,0,0,0,1,0,0,0,121,1331,133.43715225
+"chicago","chicago city","2013 Toyota_ Camry_","excellent","4 cylinders","fwd","gas",6.3,"silver","mid-size","automatic","sedan",1,12500,9.4334841,2013,5,1.8405496,0,0,0,1,0,0,0,25,125,39.69
+"chicago","chicago suburbs","2004 toyota camry","Missing","Missing","Missing","gas",13.4333,NA,NA,"automatic","sedan",1,5500,8.6125031,2004,14,2.5977366,0,0,0,0,0,0,0,196,2744,180.45354889
+"chicago","chicago suburbs","2008 toyota camry le","excellent","4 cylinders","rwd","gas",10.9,"black","full-size","automatic","sedan",0,6000,8.6995144,2008,10,2.3887627,1,0,0,1,0,0,0,100,1000,118.81
+"chicago","chicago S","2013 toyota camry se","good","4 cylinders","Missing","gas",7.6,"silver",NA,"automatic","Missing",0,12000,9.392662,2013,5,2.0281482,0,0,1,0,1,0,0,25,125,57.76
+"chicago","chicago suburbs","2002 toyota camry","good","6 cylinders","fwd","gas",16.2,"red",NA,"automatic","convertible",0,3499,8.1602325,2002,16,2.7850113,0,0,0,0,1,0,1,256,4096,262.44
+"chicago","chicago suburbs","1999 toyota camry le","good","6 cylinders","Missing","gas",16.3,NA,NA,"automatic","Missing",0,1000,6.9077554,1999,19,2.7911651,1,0,0,0,1,0,1,361,6859,265.69
+"chicago","chicago N","2002 toyota camry le 4cyl","good","4 cylinders","fwd","gas",17.3906,"blue","mid-size","automatic","sedan",0,3500,8.1605186,2002,16,2.8559299,1,0,0,0,1,0,0,256,4096,302.43296836
+"chicago","chicago city","2002 2002 Toyota camry","Missing","Missing","Missing","gas",14.3267211914062,NA,NA,"automatic","Missing",0,3900,8.2687321,2002,16,2.6621263,0,0,0,0,0,0,0,256,4096,205.254940096289
+"chicago","chicago S","2003 toyota camry","excellent","4 cylinders","fwd","gas",17,"grey","mid-size","automatic","Missing",0,2800,7.9373746,2003,15,2.8332133,0,0,0,1,0,0,0,225,3375,289
+"chicago","chicago W","2010 toyota camry le","excellent","4 cylinders","fwd","gas",14.4,NA,NA,"automatic","Missing",0,5800,8.6656132,2010,8,2.6672282,1,0,0,1,0,0,0,64,512,207.36
+"chicago","chicago W","2004 Toyota Camry le","like new","4 cylinders","fwd","gas",12.7,"blue","mid-size","automatic","sedan",0,3300,8.1016779,2004,14,2.5416019,1,0,0,0,0,1,0,196,2744,161.29
+"chicago","chicago N","2001 Toyota Camry","good","4 cylinders","fwd","gas",13.9,"silver",NA,"automatic","Missing",0,1099,7.0021558,2001,17,2.6318889,0,0,0,0,1,0,0,289,4913,193.21
+"chicago","chicago suburbs","2001 Toyota Camry.","good","4 cylinders","fwd","gas",11.5,"silver","full-size","automatic","sedan",0,2499,7.8236461,2001,17,2.442347,0,0,0,0,1,0,0,289,4913,132.25
+"chicago","chicago city","2010 TOYOTA CAMRY","Missing","Missing","fwd","gas",8.14,"blue",NA,"automatic","sedan",1,7999,8.987072,2010,8,2.0967901,0,0,0,0,0,0,0,64,512,66.2596
+"chicago","chicago city","2002 Toyota Camry LE Sedan","excellent","4 cylinders","fwd","gas",16.9435,"grey","mid-size","automatic","sedan",0,3900,8.2687321,2002,16,2.8298843,1,0,0,1,0,0,0,256,4096,287.08219225
+"chicago","chicago N","2005 Toyota Camry","excellent","4 cylinders","fwd","gas",14.8987,"red","mid-size","automatic","sedan",1,5495,8.6115942,2005,13,2.7012739,0,0,0,1,0,0,0,169,2197,221.97126169
+"chicago","chicago S","2003 Toyota Camry LE","Missing","Missing","fwd","gas",16.5533,"silver",NA,"automatic","sedan",1,2995,8.0046997,2003,15,2.8065856,1,0,0,0,0,0,0,225,3375,274.01174089
+"chicago","chicago city","2003 Toyota Camry","Missing","4 cylinders","Missing","gas",14.0816717147827,NA,NA,"automatic","Missing",0,2700,7.9010072,2003,15,2.6448741,0,0,0,0,0,0,0,225,3375,198.293478282912
+"chicago","chicago suburbs","1999 toyota camry","excellent","6 cylinders","Missing","gas",11.4,NA,NA,"automatic","sedan",0,5249,8.565793,1999,19,2.4336133,0,0,0,1,0,0,1,361,6859,129.96
+"chicago","chicago city","2015 TOYOTA CAMRY","Missing","Missing","fwd","gas",2.5929,"black",NA,"automatic","sedan",1,12995,9.4723196,2015,3,0.95277697,0,0,0,0,0,0,0,9,27,6.72313041
+"chicago","chicago city","2002 toyota camry solara","excellent","6 cylinders","Missing","gas",15,"blue","compact","automatic","coupe",0,3000,8.0063677,2002,16,2.7080503,0,0,0,1,0,0,1,256,4096,225
+"chicago","chicago suburbs","2015 Toyota Camry","Missing","4 cylinders","fwd","gas",1.5955,"silver","mid-size","automatic","sedan",1,16257,9.6962786,2015,3,0.46718717,0,0,0,0,0,0,0,9,27,2.54562025
+"chicago","chicago city","2015 Toyota Camry","Missing","4 cylinders","fwd","gas",3.1078,"silver",NA,"automatic","sedan",1,15910,9.6747036,2015,3,1.1339151,0,0,0,0,0,0,0,9,27,9.65842084
+"chicago",NA,"2011 Toyota Camry","Missing","4 cylinders","fwd","gas",6.4628,"black",NA,"automatic","sedan",1,9700,9.1798811,2011,7,1.8660626,0,0,0,0,0,0,0,49,343,41.76778384
+"chicago","chicago city","2015 TOYOTA CAMRY","Missing","Missing","fwd","gas",7.1225,"black",NA,"automatic","sedan",1,11995,9.3922453,2015,3,1.9632587,0,0,0,0,0,0,0,9,27,50.73000625
+"chicago","chicago city","2014 Toyota Camry","Missing","4 cylinders","fwd","gas",4.7536,"silver","mid-size","automatic","sedan",1,14991,9.6152058,2014,4,1.5589023,0,0,0,0,0,0,0,16,64,22.59671296
+"chicago","chicago suburbs","2015 Toyota Camry","Missing","4 cylinders","fwd","gas",1.6867,"grey","mid-size","automatic","sedan",1,15966,9.6782169,2015,3,0.52277398,0,0,0,0,0,0,0,9,27,2.84495689
+"chicago","chicago suburbs","2007 Toyota Camry se","excellent","4 cylinders","fwd","gas",13.1,"silver","mid-size","automatic","sedan",0,6700,8.8098631,2007,11,2.5726123,0,0,1,1,0,0,0,121,1331,171.61
+"chicago","chicago city","1999 toyota camry","excellent","4 cylinders","Missing","gas",25.3,NA,"full-size","automatic","Missing",0,1200,7.0900769,1999,19,3.2308044,0,0,0,1,0,0,0,361,6859,640.09
+"chicago","chicago city","2007 Toyota Camry","good","4 cylinders","Missing","gas",11.6269302368164,NA,NA,"automatic","Missing",0,6500,8.7795572,2007,11,2.4533241,0,0,0,0,1,0,0,121,1331,135.185506731796
+"chicago","chicago W","2014 toyota camry","like new","4 cylinders","fwd","gas",2.4691,"grey","full-size","automatic","sedan",0,16489,9.7104492,2014,4,0.90385371,0,0,0,0,0,1,0,16,64,6.09645481
+"chicago","chicago city","2013 Toyota Camry","good","4 cylinders","Missing","gas",5.0608,"red",NA,"automatic","Missing",0,14000,9.546813,2013,5,1.6215246,0,0,0,0,1,0,0,25,125,25.61169664
+"chicago","chicago W","2002 toyota camry le 4dr sedan","good","6 cylinders","fwd","gas",15.9282,"red",NA,"automatic","sedan",0,4000,8.2940493,2002,16,2.7680912,1,0,1,0,1,0,1,256,4096,253.70755524
+"chicago","chicago W","2000 toyota camry le","good","4 cylinders","fwd","gas",18.3973,NA,NA,"automatic","sedan",0,1695,7.4354382,2000,18,2.912204,1,0,0,0,1,0,0,324,5832,338.46064729
+"chicago","chicago suburbs","2014 Toyota Camry","excellent","6 cylinders","fwd","gas",4.902,"silver",NA,"automatic","sedan",1,14487,9.581007,2014,4,1.5896432,0,0,0,1,0,0,1,16,64,24.029604
+"chicago","chicago city","1998 toyota camry","Missing","4 cylinders","fwd","gas",16.8242588043213,"white",NA,"automatic","Missing",0,2100,7.6496925,1998,20,2.8228219,0,0,0,0,0,0,0,400,8000,283.055684314782
+"chicago","chicago suburbs","2012 Toyota Camry","Missing","4 cylinders","fwd","gas",5.7619,"custom","mid-size","automatic","sedan",1,14388,9.5741501,2012,6,1.7512673,0,0,0,0,0,0,0,36,216,33.19949161
+"chicago","chicago city","2017 TOYOTA CAMRY","Missing","Missing","fwd","gas",2.9439,"black",NA,"automatic","sedan",1,16499,9.7110548,2017,1,1.0797353,0,0,0,0,0,0,0,1,1,8.66654721
+"chicago","chicago suburbs","2006 Toyota_ Camry_","excellent","4 cylinders","fwd","gas",10,"white","mid-size","automatic","sedan",1,6300,8.7483053,2006,12,2.3025851,0,0,0,1,0,0,0,144,1728,100
+"chicago","chicago suburbs","2014 Toyota Camry SE","good","4 cylinders","fwd","gas",4.3,"grey",NA,"automatic","sedan",0,11700,9.3673439,2014,4,1.4586151,0,0,1,0,1,0,0,16,64,18.49
+"chicago","chicago N","2012 Toyota Camry","Missing","4 cylinders","fwd","gas",5.7619,"custom","mid-size","automatic","sedan",1,14388,9.5741501,2012,6,1.7512673,0,0,0,0,0,0,0,36,216,33.19949161
+"chicago","chicago city","2001 Toyota Camry","Missing","Missing","Missing","gas",16.2014694213867,NA,NA,"automatic","Missing",0,1600,7.377759,2001,17,2.7851019,0,0,0,0,0,0,0,289,4913,262.487611412129
+"chicago","chicago city","2015 TOYOTA CAMRY","Missing","Missing","fwd","gas",6.0499,NA,NA,"automatic","sedan",1,12322,9.4191418,2015,3,1.8000418,0,0,0,0,0,0,0,9,27,36.60129001
+"chicago","chicago city","2002 Toyota Camry","Missing","4 cylinders","Missing","gas",16.84,NA,NA,"automatic","Missing",0,3000,8.0063677,2002,16,2.8237569,0,0,0,0,0,0,0,256,4096,283.5856
+"chicago","chicago suburbs","2009 Toyota Camry","Missing","4 cylinders","Missing","gas",13.04,"red",NA,"automatic","sedan",1,7499,8.9225254,2009,9,2.5680215,0,0,0,0,0,0,0,81,729,170.0416
+"chicago","chicago suburbs","2005 toyota camry le","like new","4 cylinders","fwd","gas",6.4339,"grey","mid-size","automatic","sedan",0,8800,9.0825071,2005,13,1.8615808,1,0,0,0,0,1,0,169,2197,41.39506921
+"chicago","chicago N","2005 Toyota Camry V6","excellent","6 cylinders","fwd","gas",20.12,"silver","mid-size","automatic","sedan",1,2500,7.8240461,2005,13,3.0017142,0,0,0,1,0,0,1,169,2197,404.8144
+"chicago","chicago suburbs","2007 Toyota Camry","Missing","4 cylinders","fwd","gas",17.9758,"silver",NA,"automatic","sedan",1,4800,8.4763708,2007,11,2.8890264,0,0,0,0,0,0,0,121,1331,323.12938564
+"chicago","chicago suburbs","2011 Toyota_ Camry_","excellent","4 cylinders","fwd","gas",10,"grey","mid-size","automatic","sedan",1,8995,9.1044245,2011,7,2.3025851,0,0,0,1,0,0,0,49,343,100
+"chicago","chicago W","2015 Toyota Camry","Missing","4 cylinders","fwd","gas",5.5396,"black",NA,"automatic","sedan",1,14990,9.615139,2015,3,1.7119223,0,0,0,0,0,0,0,9,27,30.68716816
+"chicago","chicago suburbs","2006 TOYOTA CAMRY SE","good","4 cylinders","fwd","gas",8.4304,"silver","full-size","automatic","sedan",1,12500,9.4334841,2006,12,2.1318443,0,0,1,0,1,0,0,144,1728,71.07164416
+"chicago","chicago city","2001 toyota camry le","Missing","Missing","Missing","gas",16.2014694213867,NA,NA,"automatic","Missing",0,1600,7.377759,2001,17,2.7851019,1,0,0,0,0,0,0,289,4913,262.487611412129
+"chicago","chicago city","2004 toyota camry solara","Missing","Missing","Missing","gas",15.4080457687378,NA,NA,"automatic","Missing",0,2500,7.8240461,2004,14,2.7348897,0,0,0,0,0,0,0,196,2744,237.407874411518
+"chicago","chicago city","2011 toyota camry le","Missing","Missing","fwd","gas",6.0154,NA,NA,"automatic","Missing",0,10695,9.2775316,2011,7,1.7943228,1,0,0,0,0,0,0,49,343,36.18503716
+"chicago","chicago suburbs","2006 TOYOTA CAMRY LE","Missing","4 cylinders","Missing","gas",14.155,"red",NA,"automatic","sedan",1,3999,8.2937994,2006,12,2.6500678,1,0,0,0,0,0,0,144,1728,200.364025
+"chicago","chicago N","2005 toyota camry le","Missing","Missing","Missing","gas",9.5,NA,NA,"automatic","Missing",0,4500,8.4118328,2005,13,2.2512918,1,0,0,0,0,0,0,169,2197,90.25
+"chicago","chicago S","2009 Toyota Camry","Missing","Missing","fwd","gas",14.5777,"silver",NA,"automatic","sedan",1,4995,8.5161924,2009,9,2.679493,0,0,0,0,0,0,0,81,729,212.50933729
+"chicago","chicago suburbs","2011 Toyota_ Camry_","excellent","4 cylinders","fwd","gas",9.9999,"grey","mid-size","automatic","sedan",1,8995,9.1044245,2011,7,2.3025751,0,0,0,1,0,0,0,49,343,99.99800001
+"chicago","chicago city","2013 TOYOTA CAMRY","Missing","Missing","fwd","gas",6.7513,"black",NA,"automatic","sedan",1,11988,9.3916616,2013,5,1.9097351,0,0,0,0,0,0,0,25,125,45.58005169
+"chicago","chicago city","1999 toyota camry le","good","4 cylinders","fwd","gas",16.43,NA,NA,"automatic","sedan",0,1650,7.4085307,1999,19,2.799109,1,0,0,0,1,0,0,361,6859,269.9449
+"chicago","chicago W","2002 toyota camry","good","6 cylinders","fwd","gas",12.8,"brown","full-size","automatic","sedan",0,3590,8.1859074,2002,16,2.5494452,0,0,0,0,1,0,1,256,4096,163.84
+"chicago","chicago suburbs","2006 Toyota_ Camry_","excellent","4 cylinders","fwd","gas",3.8,"grey","mid-size","automatic","sedan",1,8980,9.1027555,2006,12,1.3350011,0,0,0,1,0,0,0,144,1728,14.44
+"chicago","chicago city","2002 toyota camry le","like new","6 cylinders","fwd","gas",14.1,"black","mid-size","automatic","sedan",1,3990,8.2915468,2002,16,2.6461749,1,0,0,0,0,1,1,256,4096,198.81
+"chicago","chicago city","2012 TOYOTA CAMRY","Missing","Missing","fwd","gas",7.7938,"blue",NA,"automatic","sedan",1,10988,9.3045588,2012,6,2.0533285,0,0,0,0,0,0,0,36,216,60.74331844
+"chicago",NA,"2014 Toyota Camry","Missing","4 cylinders","fwd","gas",6.7393,"red",NA,"automatic","sedan",1,11900,9.3842936,2014,4,1.907956,0,0,0,0,0,0,0,16,64,45.41816449
+"chicago","chicago city","1997 toyota camry xle","Missing","4 cylinders","fwd","gas",24,"blue",NA,"automatic","Missing",0,1000,6.9077554,1997,21,3.1780539,0,1,0,0,0,0,0,441,9261,576
+"chicago","chicago S","2012 toyota camry se","like new","4 cylinders","Missing","gas",11.3,"black",NA,"automatic","Missing",0,11500,9.3501024,2012,6,2.4248028,0,0,1,0,0,1,0,36,216,127.69
+"chicago","chicago N","1998 toyota camry","good","4 cylinders","fwd","gas",22,NA,"mid-size","automatic","Missing",0,800,6.6846118,1998,20,3.0910425,0,0,0,0,1,0,0,400,8000,484
+"chicago","indiana NW","1997 Toyota Camry XLE","good","6 cylinders","Missing","gas",21.9,"white",NA,"automatic","sedan",0,1100,7.0030656,1997,21,3.0864866,0,1,0,0,1,0,1,441,9261,479.61
+"chicago",NA,"2011 Toyota Camry","Missing","4 cylinders","fwd","gas",6.4628,"black",NA,"automatic","sedan",1,9977,9.2080374,2011,7,1.8660626,0,0,0,0,0,0,0,49,343,41.76778384
+"chicago","chicago city","2013 TOYOTA CAMRY","Missing","Missing","fwd","gas",7.2006,NA,NA,"automatic","sedan",1,10883,9.2949572,2013,5,1.9741644,0,0,0,0,0,0,0,25,125,51.84864036
+"chicago","chicago city","2007 TOYOTA CAMRY V6 XLE","like new","6 cylinders","fwd","gas",5,"silver",NA,"automatic","sedan",0,9300,9.1377697,2007,11,1.6094379,0,1,0,0,0,1,1,121,1331,25
+"chicago","chicago city","2002 Toyota Camry LE 4dr","Missing","Missing","Missing","gas",14.3267211914062,NA,NA,"automatic","Missing",0,2595,7.861342,2002,16,2.6621263,1,0,0,0,0,0,0,256,4096,205.254940096289
+"chicago","chicago S","2014 toyota camry xle","excellent","4 cylinders","fwd","gas",2.389,"silver","mid-size","automatic","sedan",0,14900,9.6091166,2014,4,0.87087488,0,1,0,1,0,0,0,16,64,5.707321
+"chicago","chicago S","2003 TOYOTA CAMRY","Missing","6 cylinders","Missing","gas",14.6651,"white",NA,"automatic","coupe",1,3999,8.2937994,2003,15,2.6854706,0,0,0,0,0,0,1,225,3375,215.06515801
+"chicago","chicago N","2014 Toyota Camry","Missing","4 cylinders","fwd","gas",4.7536,"silver","mid-size","automatic","sedan",1,14991,9.6152058,2014,4,1.5589023,0,0,0,0,0,0,0,16,64,22.59671296
+"chicago","chicago city","2007 toyota camry","Missing","4 cylinders","Missing","gas",11.6269302368164,NA,NA,"automatic","sedan",0,5500,8.6125031,2007,11,2.4533241,0,0,0,0,0,0,0,121,1331,135.185506731796
+"chicago","chicago W","2005 toyota camry","good","6 cylinders","fwd","gas",18.65,"grey","mid-size","automatic","Missing",0,2300,7.7406645,2005,13,2.9258461,0,0,0,0,1,0,1,169,2197,347.8225
+"chicago",NA,"2011 Toyota Camry","Missing","4 cylinders","fwd","gas",6.4628,"black",NA,"automatic","sedan",1,9900,9.2002897,2011,7,1.8660626,0,0,0,0,0,0,0,49,343,41.76778384
+"chicago","chicago city","1991 toyota camry","good","4 cylinders","fwd","gas",14,NA,NA,"automatic","Missing",0,650,6.4769726,1991,27,2.6390574,0,0,0,0,1,0,0,729,19683,196
+"chicago","chicago city","2006 toyota camry","good","4 cylinders","Missing","gas",15,"black","full-size","automatic","sedan",0,4000,8.2940493,2006,12,2.7080503,0,0,0,0,1,0,0,144,1728,225
+"chicago","chicago S","1998 toyota camry le","Missing","4 cylinders","Missing","gas",14.5,"black","mid-size","automatic","sedan",0,550,6.3099184,1998,20,2.6741486,1,0,0,0,0,0,0,400,8000,210.25
+"chicago","chicago city","2000 toyota camry","excellent","4 cylinders","Missing","gas",16.8334579467773,"green",NA,"automatic","Missing",0,2799,7.9370174,2000,18,2.8233685,0,0,0,1,0,0,0,324,5832,283.365306445921
+"chicago","chicago S","2011 toyota camry le","good","Missing","Missing","gas",14.2,NA,NA,"automatic","Missing",0,6999,8.8535223,2011,7,2.6532419,1,0,0,0,1,0,0,49,343,201.64
+"chicago","chicago suburbs","2001 toyota camry","like new","Missing","Missing","gas",16.2014694213867,NA,NA,"automatic","Missing",0,3400,8.1315308,2001,17,2.7851019,0,0,0,0,0,1,0,289,4913,262.487611412129
+"chicago","chicago city","1999 toyota camry le","excellent","4 cylinders","fwd","gas",13.3,"silver","mid-size","automatic","sedan",1,1790,7.4899707,1999,19,2.587764,1,0,0,1,0,0,0,361,6859,176.89
+"chicago","chicago city","2005 toyota camry xle","Missing","Missing","Missing","gas",14.3842515945435,NA,NA,"automatic","Missing",0,2200,7.6962128,2005,13,2.6661339,0,1,0,0,0,0,0,169,2197,206.906693935126
+"chicago","chicago W","2002 Toyota Camry Solara","Missing","Missing","Missing","gas",14.3267211914062,NA,NA,"automatic","Missing",0,4695,8.4542532,2002,16,2.6621263,0,0,0,0,0,0,0,256,4096,205.254940096289
+"chicago","chicago S","2008 toyota camry","Missing","Missing","Missing","gas",12.5481119155884,NA,NA,"automatic","Missing",0,8900,9.0938063,2008,10,2.5295701,0,0,0,0,0,0,0,100,1000,157.455112646131
+"chicago","chicago city","2004 toyota camry xle","Missing","Missing","Missing","gas",15.4080457687378,NA,NA,"automatic","Missing",0,3599,8.1884117,2004,14,2.7348897,0,1,0,0,0,0,0,196,2744,237.407874411518
+"chicago","chicago suburbs","2014 Toyota Camry","good","4 cylinders","fwd","gas",3.154,"black",NA,"automatic","sedan",0,11800,9.3758545,2014,4,1.1486715,0,0,0,0,1,0,0,16,64,9.947716
+"chicago","chicago S","2008 TOYOTA CAMRY SOLARA","Missing","4 cylinders","Missing","gas",12.9926,NA,NA,"automatic","convertible",1,5999,8.6993484,2008,10,2.5643799,0,0,0,0,0,0,0,100,1000,168.80765476
+"chicago","chicago suburbs","1994 toyota camry","good","4 cylinders","fwd","gas",17.99,"white","full-size","automatic","sedan",0,850,6.7452364,1994,24,2.889816,0,0,0,0,1,0,0,576,13824,323.6401
+"chicago","chicago suburbs","1998 toyota camry le","good","4 cylinders","fwd","gas",16.8242588043213,"grey","full-size","automatic","sedan",0,1450,7.2793188,1998,20,2.8228219,1,0,0,0,1,0,0,400,8000,283.055684314782
+"chicago","chicago suburbs","2015 Toyota Camry LE","Missing","Missing","fwd","gas",9.0147,"black",NA,"automatic","sedan",1,14995,9.6154718,2015,3,2.1988566,1,0,0,0,0,0,0,9,27,81.26481609
+"chicago","chicago W","2009 toyota camry le","like new","4 cylinders","fwd","gas",13.2572,"silver","full-size","automatic","sedan",1,6300,8.7483053,2009,9,2.5845408,1,0,0,0,0,1,0,81,729,175.75335184
+"chicago","chicago city","2009 TOYOTA CAMRY LE","good","4 cylinders","fwd","gas",16.4503631591797,"black","mid-size","automatic","Missing",1,5995,8.6986809,2009,9,2.8003476,1,0,0,0,1,0,0,81,729,270.614448068896
+"chicago","chicago suburbs","2005 Toyota Camry","excellent","4 cylinders","fwd","gas",8.5069,NA,"mid-size","automatic","sedan",1,6277,8.744647,2005,13,2.1408775,0,0,0,1,0,0,0,169,2197,72.36734761
+"chicago","chicago W","2011 toyota camry xle","excellent","6 cylinders","fwd","gas",9.0653,"green","full-size","automatic","sedan",1,8300,9.0240107,2011,7,2.2044539,0,1,0,1,0,0,1,49,343,82.17966409
+"chicago","chicago suburbs","2005 TOYOTA CAMRY SOLARA","Missing","8 cylinders","Missing","gas",13.65,"red",NA,"automatic","coupe",1,4499,8.4116106,2005,13,2.6137395,0,0,0,0,0,0,0,169,2197,186.3225
+"chicago","chicago city","2011 toyota camry le","excellent","4 cylinders","fwd","gas",14,"black","compact","automatic","sedan",0,6500,8.7795572,2011,7,2.6390574,1,0,0,1,0,0,0,49,343,196
+"chicago","chicago city","2003 Toyota Camry","Missing","Missing","Missing","gas",10.5,NA,NA,"automatic","Missing",0,2950,7.9895606,2003,15,2.3513753,0,0,0,0,0,0,0,225,3375,110.25
+"chicago","chicago city","2010 toyota camry se","Missing","Missing","Missing","gas",14.6639995574951,NA,NA,"automatic","Missing",0,12000,9.392662,2010,8,2.6853955,0,0,1,0,0,0,0,64,512,215.032883022217
+"chicago","chicago city","2002 toyota camry le","Missing","4 cylinders","fwd","gas",14.3267211914062,"silver","full-size","automatic","sedan",0,1800,7.495542,2002,16,2.6621263,1,0,0,0,0,0,0,256,4096,205.254940096289
+"chicago","chicago city","2003 toyota camry","good","4 cylinders","fwd","gas",18.9,NA,NA,"automatic","sedan",0,2098,7.6487398,2003,15,2.939162,0,0,0,0,1,0,0,225,3375,357.21
+"chicago","chicago city","2014 Toyota Camry","Missing","Missing","Missing","gas",4.79168653488159,NA,NA,"automatic","Missing",0,12800,9.4572001,2014,4,1.5668825,0,0,0,0,0,0,0,16,64,22.9602598485656
+"chicago","chicago city","2007 Toyota Camry Solara Sport","Missing","Missing","Missing","gas",11.6269302368164,NA,NA,"automatic","Missing",0,4500,8.4118328,2007,11,2.4533241,0,0,0,0,0,0,0,121,1331,135.185506731796
+"chicago","chicago city","2007 Toyota Camry","excellent","4 cylinders","fwd","gas",6.2999,"black","mid-size","automatic","sedan",1,8942,9.0985146,2007,11,1.8405337,0,0,0,1,0,0,0,121,1331,39.68874001
+"chicago","chicago suburbs","1994 toyota camry","good","4 cylinders","fwd","gas",17.99,"white","full-size","automatic","sedan",0,700,6.5510802,1994,24,2.889816,0,0,0,0,1,0,0,576,13824,323.6401
+"chicago","chicago city","2011 toyota camry","like new","4 cylinders","fwd","gas",12.5,"white","compact","automatic","sedan",0,6500,8.7795572,2011,7,2.5257287,0,0,0,0,0,1,0,49,343,156.25
+"chicago","chicago city","2007 Toyota Camry","excellent","4 cylinders","fwd","gas",6.2999,"black","mid-size","automatic","sedan",1,8888,9.0924578,2007,11,1.8405337,0,0,0,1,0,0,0,121,1331,39.68874001
+"chicago","chicago W","2007 Toyota Camry","excellent","4 cylinders","fwd","gas",11.5515,"silver","mid-size","automatic","sedan",1,6350,8.7562103,2007,11,2.4468153,0,0,0,1,0,0,0,121,1331,133.43715225
+"chicago","chicago city","2004 toyota camry","good","4 cylinders","Missing","gas",15.4080457687378,"white",NA,"automatic","Missing",0,3700,8.2160883,2004,14,2.7348897,0,0,0,0,1,0,0,196,2744,237.407874411518
+"chicago","chicago city","2003 toyota camry","excellent","4 cylinders","fwd","gas",14.3,"silver",NA,"automatic","Missing",0,2600,7.8632669,2003,15,2.6602595,0,0,0,1,0,0,0,225,3375,204.49
+"chicago","chicago city","2005 toyota camry","excellent","6 cylinders","Missing","gas",15.74,"silver",NA,"automatic","Missing",0,4300,8.3663702,2005,13,2.7562053,0,0,0,1,0,0,1,169,2197,247.7476
+"chicago","chicago city","2016 TOYOTA CAMRY","Missing","Missing","fwd","gas",4.095,"black",NA,"automatic","sedan",1,14995,9.6154718,2016,2,1.4097667,0,0,0,0,0,0,0,4,8,16.769025
+"chicago","chicago city","2013 toyota camry","excellent","Missing","Missing","gas",3.8,"silver",NA,"automatic","Missing",0,14000,9.546813,2013,5,1.3350011,0,0,0,1,0,0,0,25,125,14.44
+"chicago","chicago city","2012 TOYOTA CAMRY","Missing","Missing","fwd","gas",10.8722,"silver",NA,"automatic","sedan",1,9999,9.2102404,2012,6,2.386209,0,0,0,0,0,0,0,36,216,118.20473284
+"chicago","chicago S","2004 TOYOTA CAMRY  SOLARA","Missing","6 cylinders","Missing","gas",7.8,"white",NA,"automatic","sedan",1,4999,8.5169935,2004,14,2.0541236,0,0,0,0,0,0,1,196,2744,60.84
+"chicago",NA,"2011 Toyota Camry","Missing","4 cylinders","fwd","gas",6.4628,"black",NA,"automatic","sedan",1,9995,9.2098398,2011,7,1.8660626,0,0,0,0,0,0,0,49,343,41.76778384
+"chicago","chicago suburbs","2000 toyota camry","good","4 cylinders","fwd","gas",15,"silver","full-size","automatic","sedan",0,3200,8.0709057,2000,18,2.7080503,0,0,0,0,1,0,0,324,5832,225
+"chicago",NA,"2014 Toyota Camry","Missing","4 cylinders","fwd","gas",6.7393,"red",NA,"automatic","sedan",1,12488,9.4325237,2014,4,1.907956,0,0,0,0,0,0,0,16,64,45.41816449
+"chicago","chicago city","2011 Toyota Camry","Missing","Missing","fwd","gas",6.4655,"black",NA,"automatic","Missing",1,10995,9.3051958,2011,7,1.8664804,0,0,0,0,0,0,0,49,343,41.80269025
+"chicago","chicago W","2006 toyota camry solara","good","4 cylinders","fwd","gas",14.1,"silver","mid-size","automatic","coupe",0,4900,8.4969902,2006,12,2.6461749,0,0,0,0,1,0,0,144,1728,198.81
+"chicago","chicago W","2011 Toyota Camry","excellent","4 cylinders","fwd","gas",5.3763,"black","mid-size","automatic","sedan",1,10000,9.2103405,2011,7,1.6820004,0,0,0,1,0,0,0,49,343,28.90460169
+"los angeles","San Fernando","1998 toyota camry","excellent","4 cylinders","Missing","gas",18.887,NA,NA,"automatic","sedan",0,2300,7.7406645,1998,20,2.9384739,0,0,0,1,0,0,0,400,8000,356.718769
+"chicago","chicago suburbs","2000 TOYOTA CAMRY SOLARA","Missing","6 cylinders","Missing","gas",11.03,"silver",NA,"automatic","coupe",1,3799,8.2424936,2000,18,2.4006188,0,0,0,0,0,0,1,324,5832,121.6609
+"chicago","chicago S","2002 TOYOTA CAMRY LE","good","4 cylinders","fwd","gas",15.5987,"silver","full-size","automatic","sedan",0,3980,8.2890368,2002,16,2.7471876,1,0,0,0,1,0,0,256,4096,243.31944169
+"los angeles","San Fernando","2009 toyota camry","good","Missing","Missing","gas",16.4503631591797,NA,NA,"automatic","Missing",0,1540,7.3395376,2009,9,2.8003476,0,0,0,0,1,0,0,81,729,270.614448068896
+"chicago","chicago city","2017 TOYOTA CAMRY","Missing","Missing","fwd","gas",5.4911,"silver",NA,"automatic","sedan",1,15995,9.6800318,2017,1,1.7031286,0,0,0,0,0,0,0,1,1,30.15217921
+"chicago","chicago city","1999 toyota camry","Missing","Missing","Missing","gas",17.0199184417725,NA,NA,"automatic","Missing",0,780,6.6592941,1999,19,2.8343844,0,0,0,0,0,0,0,361,6859,289.677623764586
+"chicago","chicago S","2001 toyota camry solara","Missing","Missing","Missing","gas",20.8,"white","mid-size","automatic","coupe",0,2100,7.6496925,2001,17,3.0349529,0,0,0,0,0,0,0,289,4913,432.64
+"chicago","chicago suburbs","2014 Toyota Camry","excellent","4 cylinders","fwd","gas",3.3551,"blue",NA,"automatic","sedan",1,12750,9.4532862,2014,4,1.2104815,0,0,0,1,0,0,0,16,64,11.25669601
+"chicago",NA,"2011 Toyota Camry","Missing","4 cylinders","fwd","gas",6.4628,"black",NA,"automatic","sedan",1,9899,9.2001886,2011,7,1.8660626,0,0,0,0,0,0,0,49,343,41.76778384
+"chicago",NA,"2014 Toyota Camry","Missing","4 cylinders","fwd","gas",6.7393,"red",NA,"automatic","sedan",1,12333,9.4200335,2014,4,1.907956,0,0,0,0,0,0,0,16,64,45.41816449
+"chicago","chicago city","2007 toyota camry","Missing","4 cylinders","Missing","gas",11.6269302368164,NA,NA,"automatic","Missing",0,4300,8.3663702,2007,11,2.4533241,0,0,0,0,0,0,0,121,1331,135.185506731796
+"chicago","chicago city","2000 toyota camry","good","6 cylinders","Missing","gas",16.8334579467773,NA,NA,"automatic","Missing",0,1899,7.5490828,2000,18,2.8233685,0,0,0,0,1,0,1,324,5832,283.365306445921
+"los angeles","San Fernando","2010 toyota camry","like new","4 cylinders","fwd","gas",4.6,"white","full-size","automatic","sedan",0,9750,9.1850224,2010,8,1.5260563,0,0,0,0,0,1,0,64,512,21.16
+"chicago","chicago S","1998 TOYOTA CAMRY LE","Missing","4 cylinders","Missing","gas",7.2075,"grey",NA,"automatic","sedan",1,3299,8.1013746,1998,20,1.9751221,1,0,0,0,0,0,0,400,8000,51.94805625
+"chicago","chicago city","2000 toyota camry le 4dr sedan","good","4 cylinders","fwd","gas",15,"silver","full-size","automatic","sedan",0,3200,8.0709057,2000,18,2.7080503,1,0,1,0,1,0,0,324,5832,225
+"chicago","chicago S","2001 TOYOTA CAMRY","Missing","6 cylinders","Missing","gas",8.0629,"grey",NA,"automatic","sedan",1,3499,8.1602325,2001,17,2.0872734,0,0,0,0,0,0,1,289,4913,65.01035641
+"chicago","chicago city","2003 toyota camry solara convertible","excellent","4 cylinders","fwd","gas",14.6,"white",NA,"automatic","convertible",0,3500,8.1605186,2003,15,2.6810215,0,0,0,1,0,0,0,225,3375,213.16
+"chicago","chicago suburbs","1999 toyota camry le","good","4 cylinders","fwd","gas",17.0199184417725,"white",NA,"automatic","Missing",0,2000,7.6009026,1999,19,2.8343844,1,0,0,0,1,0,0,361,6859,289.677623764586
+"chicago","chicago suburbs","2001 TOYOTA CAMRY","excellent","4 cylinders","fwd","gas",18,"grey","full-size","automatic","sedan",0,2400,7.7832241,2001,17,2.8903718,0,0,0,1,0,0,0,289,4913,324
+"chicago","chicago city","1999 Toyota camry","Missing","Missing","Missing","gas",17.0199184417725,NA,NA,"automatic","Missing",0,1600,7.377759,1999,19,2.8343844,0,0,0,0,0,0,0,361,6859,289.677623764586
+"los angeles","LA san gabriel","2009 toyota camry le 4dr sedan","Missing","Missing","Missing","gas",12.76,NA,NA,"automatic","Missing",0,6999,8.8535223,2009,9,2.5463152,1,0,1,0,0,0,0,81,729,162.8176
+"chicago","chicago suburbs","1998 toyota camry","good","4 cylinders","fwd","gas",19.8,"red","compact","automatic","Missing",0,800,6.6846118,1998,20,2.985682,0,0,0,0,1,0,0,400,8000,392.04
+"chicago","chicago city","2014 toyota camry","like new","Missing","Missing","gas",5,NA,NA,"automatic","Missing",0,13500,9.5104446,2014,4,1.6094379,0,0,0,0,0,1,0,16,64,25
+"chicago","chicago suburbs","2006 toyota camry solara","good","Missing","fwd","gas",12.8694,"black",NA,"automatic","Missing",0,5000,8.5171928,2006,12,2.5548525,0,0,0,0,1,0,0,144,1728,165.62145636
+"chicago","chicago city","2001 toyota camry solara","Missing","4 cylinders","fwd","gas",16.2014694213867,NA,NA,"automatic","coupe",0,2600,7.8632669,2001,17,2.7851019,0,0,0,0,0,0,0,289,4913,262.487611412129
+"chicago","chicago city","2009 Toyota camry","Missing","Missing","Missing","gas",16.4503631591797,NA,NA,"automatic","Missing",0,6500,8.7795572,2009,9,2.8003476,0,0,0,0,0,0,0,81,729,270.614448068896
+"chicago","chicago W","2012 toyota camry se","excellent","4 cylinders","fwd","gas",4.233,"black",NA,"automatic","Missing",0,11550,9.3544407,2012,6,1.4429109,0,0,1,1,0,0,0,36,216,17.918289
+"los angeles","LA westside-southbay","2000 toyota camry le 4dr sedan","excellent","4 cylinders","fwd","gas",15.9126,"green","mid-size","automatic","sedan",0,2450,7.8038435,2000,18,2.7671113,1,0,1,1,0,0,0,324,5832,253.21083876
+"chicago","chicago S","2003 toyota camry","Missing","Missing","Missing","gas",23,NA,NA,"automatic","Missing",0,2700,7.9010072,2003,15,3.1354942,0,0,0,0,0,0,0,225,3375,529
+"chicago","chicago S","2002 toyota camry le","good","4 cylinders","fwd","gas",15.5987,"silver","full-size","automatic","sedan",0,3980,8.2890368,2002,16,2.7471876,1,0,0,0,1,0,0,256,4096,243.31944169
+"chicago","indiana NW","1999 toyota camry le","good","4 cylinders","fwd","gas",14.415,"grey","mid-size","automatic","sedan",1,2995,8.0046997,1999,19,2.6682694,1,0,0,0,1,0,0,361,6859,207.792225
+"chicago","chicago suburbs","2005 toyota camry se sedan 4d","good","4 cylinders","fwd","gas",18.9,"silver","full-size","automatic","Missing",0,3395,8.1300592,2005,13,2.939162,0,0,1,0,1,0,0,169,2197,357.21
+"chicago","chicago city","2005 toyota camry","good","4 cylinders","fwd","gas",22,"red","mid-size","automatic","sedan",0,4000,8.2940493,2005,13,3.0910425,0,0,0,0,1,0,0,169,2197,484
+"chicago","chicago city","1999 toyota camry","good","6 cylinders","fwd","gas",25.1925,"white","mid-size","automatic","sedan",0,1800,7.495542,1999,19,3.2265463,0,0,0,0,1,0,1,361,6859,634.66205625
+"los angeles","LA long beach","1999 toyota camry xle","Missing","Missing","Missing","gas",17.0199184417725,NA,NA,"automatic","Missing",0,1000,6.9077554,1999,19,2.8343844,0,1,0,0,0,0,0,361,6859,289.677623764586
+"chicago","chicago city","2003 toyota camry","Missing","Missing","Missing","gas",14.0816717147827,NA,NA,"automatic","Missing",0,2300,7.7406645,2003,15,2.6448741,0,0,0,0,0,0,0,225,3375,198.293478282912
+"chicago","chicago city","1999 1999 Toyota Camry","Missing","Missing","Missing","gas",17.0199184417725,NA,NA,"automatic","Missing",0,2200,7.6962128,1999,19,2.8343844,0,0,0,0,0,0,0,361,6859,289.677623764586
+"chicago","chicago city","2003 toyota camry","Missing","Missing","Missing","gas",14.0816717147827,NA,NA,"automatic","Missing",0,2500,7.8240461,2003,15,2.6448741,0,0,0,0,0,0,0,225,3375,198.293478282912
+"los angeles","LA long beach","2012 Toyota Camry","Missing","Missing","Missing","gas",8.30497360229492,NA,NA,"automatic","Missing",0,8000,8.9871969,2012,6,2.1168547,0,0,0,0,0,0,0,36,216,68.9725865348155
+"chicago","chicago city","2009 Toyota Camry","Missing","Missing","Missing","gas",16.4503631591797,NA,NA,"automatic","Missing",0,6800,8.8246775,2009,9,2.8003476,0,0,0,0,0,0,0,81,729,270.614448068896
+"chicago","chicago N","1998 toyota camry le","good","4 cylinders","fwd","gas",20,"custom","full-size","automatic","sedan",0,1000,6.9077554,1998,20,2.9957323,1,0,0,0,1,0,0,400,8000,400
+"chicago","chicago city","2015 TOYOTA CAMRY","Missing","Missing","fwd","gas",3.6154,"white",NA,"automatic","sedan",1,14994,9.6154051,2015,3,1.2852025,0,0,0,0,0,0,0,9,27,13.07111716
+"chicago","chicago W","2006 toyota camry solara convertible","excellent","6 cylinders","fwd","gas",7.5962,"black",NA,"automatic","Missing",0,9785,9.1886063,2006,12,2.0276482,0,0,0,1,0,0,1,144,1728,57.70225444
+"chicago","chicago S","1999 toyota camry le","excellent","4 cylinders","fwd","gas",17.0199184417725,NA,"full-size","automatic","coupe",0,1500,7.3132205,1999,19,2.8343844,1,0,0,1,0,0,0,361,6859,289.677623764586
+"chicago","chicago city","2015 toyota camry xle","excellent","4 cylinders","fwd","gas",4.96321296691895,"silver",NA,"automatic","Missing",1,17777,9.7856607,2015,3,1.6020533,0,1,0,1,0,0,0,9,27,24.6334829549924
+"los angeles","San Fernando","2009 toyota camry","excellent","6 cylinders","fwd","gas",16.4503631591797,NA,NA,"automatic","sedan",0,8500,9.047821,2009,9,2.8003476,0,0,0,1,0,0,1,81,729,270.614448068896
+"chicago","chicago W","2016 Toyota Camry","Missing","4 cylinders","fwd","gas",4.5484,"black",NA,"automatic","sedan",1,14593,9.5882969,2016,2,1.5147755,0,0,0,0,0,0,0,4,8,20.68794256
+"chicago","chicago S","2003 TOYOTA CAMRY  SOLARA","Missing","6 cylinders","Missing","gas",15.7,"black",NA,"automatic","SUV",1,5499,8.6123219,2003,15,2.7536607,0,0,0,0,0,0,1,225,3375,246.49
+"chicago","chicago N","2010 Toyota Camry se","Missing","Missing","Missing","gas",14.6639995574951,NA,NA,"automatic","Missing",0,10800,9.2873011,2010,8,2.6853955,0,0,1,0,0,0,0,64,512,215.032883022217
+"los angeles","LA long beach","2010 toyota camry","like new","4 cylinders","fwd","gas",4.6,"white","full-size","automatic","sedan",0,9750,9.1850224,2010,8,1.5260563,0,0,0,0,0,1,0,64,512,21.16
+"chicago","chicago suburbs","2007 TOYOTA CAMRY","Missing","4 cylinders","Missing","gas",4.314,"red",NA,"automatic","sedan",1,9499,9.1589422,2007,11,1.4618655,0,0,0,0,0,0,0,121,1331,18.610596
+"los angeles","San Fernando","2014 Toyota Camry XLE","Missing","Missing","fwd","gas",2.23,"black",NA,"automatic","sedan",1,16450,9.7080803,2014,4,0.8020016,0,1,0,0,0,0,0,16,64,4.9729
+"los angeles","LA san gabriel","1999 toyota camry","Missing","Missing","Missing","gas",17.0199184417725,NA,NA,"automatic","Missing",0,2500,7.8240461,1999,19,2.8343844,0,0,0,0,0,0,0,361,6859,289.677623764586
+"los angeles","San Fernando","2001 toyota camry solara","Missing","Missing","Missing","gas",12,NA,NA,"automatic","Missing",0,3000,8.0063677,2001,17,2.4849067,0,0,0,0,0,0,0,289,4913,144
+"los angeles","central LA","2005 Toyota Camry LE","excellent","4 cylinders","Missing","gas",14.3842515945435,NA,NA,"automatic","sedan",0,5800,8.6656132,2005,13,2.6661339,1,0,0,1,0,0,0,169,2197,206.906693935126
+"los angeles","LA long beach","2014 toyota camry se","good","4 cylinders","fwd","gas",6.6,"silver","compact","automatic","sedan",0,13000,9.4727049,2014,4,1.8870697,0,0,1,0,1,0,0,16,64,43.56
+"los angeles","LA san gabriel","2005 toyota camry","good","Missing","Missing","gas",10,"black",NA,"automatic","Missing",0,5000,8.5171928,2005,13,2.3025851,0,0,0,0,1,0,0,169,2197,100
+"los angeles","central LA","2006 Toyota Camry Solara SE","Missing","Missing","fwd","gas",11.2426,"blue",NA,"automatic","coupe",1,6995,8.852951,2006,12,2.4197102,0,0,1,0,0,0,0,144,1728,126.39605476
+"los angeles","San Fernando","2012 toyota Camry LE","like new","4 cylinders","fwd","gas",4.8894,"grey","mid-size","automatic","sedan",0,11995,9.3922453,2012,6,1.5870696,1,0,0,0,0,1,0,36,216,23.90623236
+"los angeles","LA san gabriel","2000 Toyota Camry","Missing","Missing","Missing","gas",16.8334579467773,NA,NA,"automatic","Missing",0,1299,7.1693501,2000,18,2.8233685,0,0,0,0,0,0,0,324,5832,283.365306445921
+"los angeles","LA westside-southbay","2001 toyota camry ce","excellent","Missing","Missing","gas",16.2014694213867,NA,NA,"automatic","Missing",0,2500,7.8240461,2001,17,2.7851019,0,0,0,1,0,0,0,289,4913,262.487611412129
+"los angeles","North LA county","2003 toyota camry","Missing","4 cylinders","Missing","gas",17.5,NA,NA,"automatic","Missing",0,2500,7.8240461,2003,15,2.862201,0,0,0,0,0,0,0,225,3375,306.25
+"los angeles","central LA","2009 toyota camry","excellent","4 cylinders","Missing","gas",8.1,NA,NA,"automatic","Missing",0,7600,8.9359035,2009,9,2.0918641,0,0,0,1,0,0,0,81,729,65.61
+"los angeles","LA westside-southbay","2001 toyota camry ce","excellent","Missing","Missing","gas",16.2014694213867,NA,NA,"automatic","sedan",0,2500,7.8240461,2001,17,2.7851019,0,0,0,1,0,0,0,289,4913,262.487611412129
+"los angeles","central LA","2007 toyota camry","like new","6 cylinders","Missing","gas",11.1465,NA,NA,"automatic","Missing",0,6000,8.6995144,2007,11,2.4111257,0,0,0,0,0,1,1,121,1331,124.24446225
+"los angeles","central LA","2009 toyota camry","like new","Missing","Missing","gas",8.1,NA,NA,"automatic","Missing",0,7595,8.9352455,2009,9,2.0918641,0,0,0,0,0,1,0,81,729,65.61
+"los angeles","LA westside-southbay","2005 Toyota Camry","excellent","6 cylinders","fwd","gas",14.3842515945435,"white","full-size","automatic","sedan",0,1055,6.9612961,2005,13,2.6661339,0,0,0,1,0,0,1,169,2197,206.906693935126
+"los angeles","LA long beach","2010 toyota camry se 4dr sedan","Missing","Missing","Missing","gas",14.6639995574951,NA,NA,"automatic","Missing",0,4500,8.4118328,2010,8,2.6853955,0,0,1,0,0,0,0,64,512,215.032883022217
+"los angeles","LA san gabriel","2005 toyota camry","Missing","Missing","Missing","gas",14.3842515945435,NA,NA,"automatic","Missing",0,3400,8.1315308,2005,13,2.6661339,0,0,0,0,0,0,0,169,2197,206.906693935126
+"los angeles","San Fernando","2008 Toyota Camry","excellent","4 cylinders","Missing","gas",12.5481119155884,NA,NA,"automatic","Missing",0,6999,8.8535223,2008,10,2.5295701,0,0,0,1,0,0,0,100,1000,157.455112646131
+"los angeles","LA long beach","2005 Toyota Camry Le","good","4 cylinders","fwd","gas",15.1352,"silver","mid-size","automatic","sedan",0,3800,8.2427559,2005,13,2.7170231,0,0,0,0,1,0,0,169,2197,229.07427904
+"los angeles","San Fernando","2000 toyota camry","excellent","4 cylinders","Missing","gas",16.8334579467773,"brown","full-size","automatic","sedan",0,2700,7.9010072,2000,18,2.8233685,0,0,0,1,0,0,0,324,5832,283.365306445921
+"los angeles","LA westside-southbay","2003 toyota camry xle","like new","4 cylinders","fwd","gas",14.0816717147827,"white","full-size","automatic","sedan",0,1000,6.9077554,2003,15,2.6448741,0,1,0,0,0,1,0,225,3375,198.293478282912
+"los angeles","LA westside-southbay","2004 Toyota Camry Le","excellent","6 cylinders","fwd","gas",15.4080457687378,"white","full-size","automatic","Missing",0,1060,6.9660244,2004,14,2.7348897,0,0,0,1,0,0,1,196,2744,237.407874411518
+"los angeles","San Fernando","2013 Toyota Camry SE","excellent","4 cylinders","Missing","gas",7.5316333770752,NA,NA,"automatic","Missing",0,10995,9.3051958,2013,5,2.0191119,0,0,1,1,0,0,0,25,125,56.7255013266731
+"los angeles","central LA","2009 toyota camry","Missing","Missing","Missing","gas",16.4503631591797,NA,NA,"automatic","Missing",0,7899,8.9744911,2009,9,2.8003476,0,0,0,0,0,0,0,81,729,270.614448068896
+"los angeles","San Fernando","2007 toyota camry","like new","6 cylinders","Missing","gas",11.6269302368164,NA,NA,"automatic","Missing",0,6000,8.6995144,2007,11,2.4533241,0,0,0,0,0,1,1,121,1331,135.185506731796
+"los angeles","central LA","2004 toyota camry","good","Missing","Missing","gas",15.4080457687378,NA,NA,"automatic","Missing",0,2500,7.8240461,2004,14,2.7348897,0,0,0,0,1,0,0,196,2744,237.407874411518
+"los angeles","San Fernando","2011 Toyota Camry","excellent","4 cylinders","fwd","gas",11.1,NA,NA,"automatic","Missing",0,8000,8.9871969,2011,7,2.406945,0,0,0,1,0,0,0,49,343,123.21
+"los angeles","LA westside-southbay","2002 toyota camry","excellent","Missing","Missing","gas",14.3267211914062,NA,NA,"automatic","Missing",0,3000,8.0063677,2002,16,2.6621263,0,0,0,1,0,0,0,256,4096,205.254940096289
+"los angeles","San Fernando","2003 Toyota camry","Missing","4 cylinders","Missing","gas",14.0816717147827,NA,NA,"automatic","Missing",0,2500,7.8240461,2003,15,2.6448741,0,0,0,0,0,0,0,225,3375,198.293478282912
+"los angeles","LA long beach","2005 Toyota Camry","good","4 cylinders","fwd","gas",15.1352,"silver","mid-size","automatic","sedan",0,3800,8.2427559,2005,13,2.7170231,0,0,0,0,1,0,0,169,2197,229.07427904
+"los angeles","central LA","2007 TOYOTA CAMRY LE","excellent","4 cylinders","fwd","gas",18.3138,"blue","mid-size","automatic","sedan",0,4900,8.4969902,2007,11,2.9076548,1,0,0,1,0,0,0,121,1331,335.39527044
+"los angeles","LA westside-southbay","2002 Toyota Camry LE","good","Missing","Missing","gas",14.3267211914062,NA,NA,"automatic","Missing",0,2500,7.8240461,2002,16,2.6621263,1,0,0,0,1,0,0,256,4096,205.254940096289
+"los angeles","San Fernando","2007 Toyota Camry LE","excellent","4 cylinders","fwd","gas",10.169,"silver","mid-size","automatic","sedan",0,6500,8.7795572,2007,11,2.3193438,1,0,0,1,0,0,0,121,1331,103.408561
+"los angeles","LA long beach","2016 toyota camry","Missing","Missing","Missing","gas",4.24904441833496,NA,NA,"automatic","Missing",0,12700,9.449357,2016,2,1.4466941,0,0,0,0,0,0,0,4,8,18.0543784689835
+"los angeles","central LA","2001 Toyota camry le","Missing","Missing","Missing","gas",16.2014694213867,NA,NA,"automatic","Missing",0,2500,7.8240461,2001,17,2.7851019,1,0,0,0,0,0,0,289,4913,262.487611412129
+"los angeles","central LA","2003 toyota camry","Missing","Missing","Missing","gas",14.0816717147827,NA,NA,"automatic","Missing",0,2400,7.7832241,2003,15,2.6448741,0,0,0,0,0,0,0,225,3375,198.293478282912
+"los angeles","LA long beach","2014 toyota camry se 4dr sedan","Missing","Missing","Missing","gas",4.79168653488159,NA,NA,"automatic","Missing",0,9500,9.1590471,2014,4,1.5668825,0,0,1,0,0,0,0,16,64,22.9602598485656
+"los angeles","San Fernando","2001 toyota camry le","excellent","4 cylinders","Missing","gas",13.3,"grey",NA,"automatic","Missing",0,3300,8.1016779,2001,17,2.587764,1,0,0,1,0,0,0,289,4913,176.89
+"los angeles","central LA","2014 Toyota Camry Se","Missing","Missing","Missing","gas",2.6942,NA,NA,"automatic","Missing",0,10300,9.2398996,2014,4,0.99110132,0,0,0,0,0,0,0,16,64,7.25871364
+"los angeles","central LA","1994 toyota camry le","good","Missing","Missing","gas",20.4159,"red","mid-size","automatic","Missing",0,600,6.3969297,1994,24,3.016314,1,0,0,0,1,0,0,576,13824,416.80897281
+"los angeles","San Fernando","2006 Toyota camry","Missing","Missing","Missing","gas",10.5,NA,NA,"automatic","Missing",0,4800,8.4763708,2006,12,2.3513753,0,0,0,0,0,0,0,144,1728,110.25
+"los angeles","central LA","2007 toyota camry le 4dr sedan","excellent","4 cylinders","fwd","gas",13.8183,"blue","mid-size","automatic","sedan",0,4900,8.4969902,2007,11,2.6259937,1,0,1,1,0,0,0,121,1331,190.94541489
+"los angeles","San Fernando","2006 Toyota Camry","like new","4 cylinders","Missing","gas",12.6671810150147,"grey","full-size","automatic","sedan",0,2300,7.7406645,2006,12,2.5390146,0,0,0,0,0,1,0,144,1728,160.457474867148
+"los angeles","central LA","2008 Toyota camry","good","4 cylinders","Missing","gas",15,"black","full-size","automatic","sedan",0,4999,8.5169935,2008,10,2.7080503,0,0,0,0,1,0,0,100,1000,225
+"los angeles","LA long beach","2007 toyota camry","like new","6 cylinders","Missing","gas",11.6269302368164,NA,NA,"automatic","Missing",0,6000,8.6995144,2007,11,2.4533241,0,0,0,0,0,1,1,121,1331,135.185506731796
+"los angeles","San Fernando","2005 Toyota Camry or Prius","Missing","Missing","Missing","gas",14.3842515945435,NA,NA,"automatic","Missing",0,9000,9.1049795,2005,13,2.6661339,0,0,0,0,0,0,0,169,2197,206.906693935126
+"los angeles","central LA","2015 Toyota Camry Se","Missing","Missing","Missing","gas",3.5007,NA,NA,"automatic","Missing",0,11900,9.3842936,2015,3,1.2529629,0,0,0,0,0,0,0,9,27,12.25490049
+"los angeles","central LA","2000 Toyota Camry","good","4 cylinders","fwd","gas",12,"white","compact","automatic","sedan",0,3900,8.2687321,2000,18,2.4849067,0,0,0,0,1,0,0,324,5832,144
+"los angeles","central LA","1998 toyota camry","good","Missing","Missing","gas",16.8242588043213,NA,NA,"automatic","Missing",0,2500,7.8240461,1998,20,2.8228219,0,0,0,0,1,0,0,400,8000,283.055684314782
+"los angeles","central LA","2009 toyota camry","excellent","4 cylinders","Missing","gas",8.1,NA,NA,"automatic","Missing",0,7500,8.922658,2009,9,2.0918641,0,0,0,1,0,0,0,81,729,65.61
+"los angeles","central LA","2012 toyota camry","Missing","Missing","Missing","gas",8.30497360229492,NA,NA,"automatic","Missing",0,1000,6.9077554,2012,6,2.1168547,0,0,0,0,0,0,0,36,216,68.9725865348155
+"los angeles","LA san gabriel","1993 toyota camry","Missing","Missing","Missing","gas",31.95,NA,NA,"automatic","Missing",0,550,6.3099184,1993,25,3.4641721,0,0,0,0,0,0,0,625,15625,1020.8025
+"los angeles","North LA county","1994 toyota camry","good","4 cylinders","fwd","gas",17.5489749908447,"black","compact","automatic","sedan",0,1000,6.9077554,1994,24,2.8649955,0,0,0,0,1,0,0,576,13824,307.966523229294
+"los angeles","LA long beach","2015 Toyota Camry SE","like new","4 cylinders","fwd","gas",11.5629,NA,"compact","automatic","sedan",0,11400,9.3413687,2015,3,2.4478016,0,0,1,0,0,1,0,9,27,133.70065641
+"los angeles","San Fernando","2007 toyota camry","excellent","4 cylinders","fwd","gas",8.48,"green","full-size","automatic","Missing",0,8300,9.0240107,2007,11,2.1377103,0,0,0,1,0,0,0,121,1331,71.9104
+"los angeles","central LA","2009 toyota camry le","excellent","Missing","Missing","gas",16.4503631591797,NA,NA,"automatic","Missing",0,7600,8.9359035,2009,9,2.8003476,1,0,0,1,0,0,0,81,729,270.614448068896
+"los angeles","LA westside-southbay","2007 Toyota Camry XLE","like new","Missing","fwd","gas",11.6269302368164,NA,"full-size","automatic","sedan",0,1500,7.3132205,2007,11,2.4533241,0,1,0,0,0,1,0,121,1331,135.185506731796
+"los angeles","LA westside-southbay","2006 toyota camry solara","good","6 cylinders","fwd","gas",16.4213,"blue","mid-size","automatic","coupe",0,3950,8.2814713,2006,12,2.7985792,0,0,0,0,1,0,1,144,1728,269.65909369
+"los angeles","central LA","2015 Toyota Camry","Missing","Missing","Missing","gas",3.4306,NA,NA,"automatic","Missing",0,12100,9.4009609,2015,3,1.2327352,0,0,0,0,0,0,0,9,27,11.76901636
+"los angeles","San Fernando","1996 Toyota Camry","good","4 cylinders","fwd","gas",21.9,NA,NA,"automatic","Missing",0,1200,7.0900769,1996,22,3.0864866,0,0,0,0,1,0,0,484,10648,479.61
+"los angeles","San Fernando","2014 Toyota Camry SE","Missing","Missing","Missing","gas",5.25,NA,NA,"automatic","Missing",0,13600,9.5178251,2014,4,1.658228,0,0,1,0,0,0,0,16,64,27.5625
+"los angeles","San Fernando","1995 toyota camry","Missing","Missing","Missing","gas",20.0425338745117,NA,NA,"automatic","Missing",0,1500,7.3132205,1995,23,2.9978566,0,0,0,0,0,0,0,529,12167,401.70316411095
+"los angeles","central LA","2003 toyota camry","good","Missing","Missing","gas",17.5,NA,NA,"automatic","Missing",0,2500,7.8240461,2003,15,2.862201,0,0,0,0,1,0,0,225,3375,306.25
+"los angeles","LA westside-southbay","2001 Toyota Camry ce","excellent","Missing","Missing","gas",16.2014694213867,NA,NA,"automatic","Missing",0,2500,7.8240461,2001,17,2.7851019,0,0,0,1,0,0,0,289,4913,262.487611412129
+"los angeles","central LA","2000 toyota camry","excellent","4 cylinders","Missing","gas",16.8334579467773,"brown","full-size","automatic","sedan",0,2700,7.9010072,2000,18,2.8233685,0,0,0,1,0,0,0,324,5832,283.365306445921
+"los angeles","San Fernando","2003 toyota camry","Missing","Missing","Missing","gas",14.0816717147827,NA,NA,"automatic","Missing",0,2500,7.8240461,2003,15,2.6448741,0,0,0,0,0,0,0,225,3375,198.293478282912
+"los angeles","LA westside-southbay","2005 toyota camry xle","excellent","6 cylinders","fwd","gas",14.3842515945435,"white","full-size","automatic","sedan",0,1068,6.9735432,2005,13,2.6661339,0,1,0,1,0,0,1,169,2197,206.906693935126
+"los angeles","San Fernando","2007 toyota camry ce","Missing","4 cylinders","Missing","gas",11.6269302368164,"black",NA,"automatic","sedan",1,6995,8.852951,2007,11,2.4533241,0,0,0,0,0,0,0,121,1331,135.185506731796
+"los angeles","San Fernando","2005 toyota camry","Missing","Missing","Missing","gas",14.3842515945435,NA,NA,"automatic","Missing",0,1000,6.9077554,2005,13,2.6661339,0,0,0,0,0,0,0,169,2197,206.906693935126
+"los angeles","LA san gabriel","2010 TOYOTA CAMRY","good","4 cylinders","Missing","gas",16,NA,NA,"automatic","Missing",0,5500,8.6125031,2010,8,2.7725887,0,0,0,0,1,0,0,64,512,256
+"los angeles","LA westside-southbay","2000 toyota camry solara","Missing","6 cylinders","fwd","gas",25.6,"white",NA,"automatic","coupe",0,500,6.2146082,2000,18,3.2425923,0,0,0,0,0,0,1,324,5832,655.36
+"los angeles","central LA","2012 Toyota Camry","like new","4 cylinders","fwd","gas",8.30497360229492,NA,NA,"automatic","Missing",0,3300,8.1016779,2012,6,2.1168547,0,0,0,0,0,1,0,36,216,68.9725865348155
+"los angeles","LA san gabriel","2004 toyota camry xle","Missing","Missing","Missing","gas",11.325,NA,NA,"automatic","Missing",1,3799,8.2424936,2004,14,2.4270127,0,1,0,0,0,0,0,196,2744,128.255625
+"los angeles","LA westside-southbay","2007 toyota camry","like new","4 cylinders","Missing","gas",12.4,"silver","compact","automatic","sedan",0,6990,8.8522358,2007,11,2.5176964,0,0,0,0,0,1,0,121,1331,153.76
+"los angeles","LA long beach","2001 Toyota Camry","excellent","4 cylinders","fwd","gas",22.5,"custom",NA,"automatic","sedan",0,1600,7.377759,2001,17,3.1135154,0,0,0,1,0,0,0,289,4913,506.25
+"los angeles","central LA","2015 Toyota Camry SE","like new","4 cylinders","fwd","gas",11.5629,NA,"compact","automatic","sedan",0,11400,9.3413687,2015,3,2.4478016,0,0,1,0,0,1,0,9,27,133.70065641
+"los angeles","LA san gabriel","2007 toyota camry le","excellent","4 cylinders","fwd","gas",10.4,"white","full-size","automatic","sedan",0,7000,8.8536654,2007,11,2.3418057,1,0,0,1,0,0,0,121,1331,108.16
+"los angeles","San Fernando","1997 toyota camry","good","4 cylinders","fwd","gas",18.7007999420166,"black","mid-size","automatic","sedan",0,1000,6.9077554,1997,21,2.9285662,0,0,0,0,1,0,0,441,9261,349.719918471328
+"los angeles","central LA","1998 toyota camry","good","4 cylinders","fwd","gas",15.8,"green","compact","automatic","sedan",0,3000,8.0063677,1998,20,2.76001,0,0,0,0,1,0,0,400,8000,249.64
+"los angeles","LA westside-southbay","2006 toyota camry solara","like new","6 cylinders","Missing","gas",16.4,NA,NA,"automatic","coupe",0,3850,8.2558289,2006,12,2.7972813,0,0,0,0,0,1,1,144,1728,268.96
+"los angeles","LA westside-southbay","2007 toyota camry solara convertible","good","6 cylinders","Missing","gas",12,"grey","mid-size","automatic","convertible",0,5000,8.5171928,2007,11,2.4849067,0,0,0,0,1,0,1,121,1331,144
+"los angeles","LA san gabriel","2015 Toyota Camry LE","good","4 cylinders","fwd","gas",4.4,"white","mid-size","automatic","sedan",1,12888,9.4640522,2015,3,1.4816046,1,0,0,0,1,0,0,9,27,19.36
+"los angeles","LA long beach","2000 Toyota Camry LE","excellent","4 cylinders","fwd","gas",18.6528,NA,"mid-size","automatic","sedan",0,2599,7.8628821,2000,18,2.9259963,1,0,0,1,0,0,0,324,5832,347.92694784
+"los angeles","LA westside-southbay","2001 Toyota Camry","good","4 cylinders","Missing","gas",13.5,NA,NA,"automatic","Missing",0,2400,7.7832241,2001,17,2.6026897,0,0,0,0,1,0,0,289,4913,182.25
+"los angeles","San Fernando","2007 toyota camry","excellent","4 cylinders","Missing","gas",11.8,NA,NA,"automatic","Missing",0,5900,8.6827078,2007,11,2.4680996,0,0,0,1,0,0,0,121,1331,139.24
+"los angeles","LA westside-southbay","1997 Toyota camry","good","4 cylinders","fwd","gas",19.756,"green","compact","automatic","coupe",0,1500,7.3132205,1997,21,2.9834573,0,0,0,0,1,0,0,441,9261,390.299536
+"los angeles","LA san gabriel","2015 TOYOTA CAMRY","Missing","Missing","fwd","gas",5.5096,NA,NA,"automatic","sedan",1,14988,9.6150055,2015,3,1.7064921,0,0,0,0,0,0,0,9,27,30.35569216
+"los angeles","LA long beach","2014 toyota camry le 4dr sedan","Missing","Missing","Missing","gas",4.79168653488159,NA,NA,"automatic","Missing",0,9000,9.1049795,2014,4,1.5668825,1,0,1,0,0,0,0,16,64,22.9602598485656
+"los angeles","LA san gabriel","2016 Toyota Camry LE","excellent","4 cylinders","Missing","gas",4.24904441833496,NA,NA,"automatic","Missing",0,15800,9.6677656,2016,2,1.4466941,1,0,0,1,0,0,0,4,8,18.0543784689835
+"los angeles","LA westside-southbay","2017 toyota camry se","like new","4 cylinders","fwd","gas",0.5,"grey","full-size","automatic","sedan",0,18500,9.8255262,2017,1,-0.69314718,0,0,1,0,0,1,0,1,1,0.25
+"los angeles","San Fernando","2010 toyota camry le 4dr sedan","good","4 cylinders","fwd","gas",15.3,"white","full-size","automatic","sedan",0,6500,8.7795572,2010,8,2.7278528,1,0,1,0,1,0,0,64,512,234.09
+"los angeles","LA san gabriel","2007 Toyota camry","Missing","Missing","Missing","gas",11.8,NA,NA,"automatic","Missing",0,8300,9.0240107,2007,11,2.4680996,0,0,0,0,0,0,0,121,1331,139.24
+"los angeles","central LA","1993 toyota camry","Missing","Missing","Missing","gas",21.9166660308838,NA,NA,"automatic","Missing",0,950,6.856462,1993,25,3.0872474,0,0,0,0,0,0,0,625,15625,480.340249909295
+"los angeles","central LA","2004 toyota camry solara","Missing","4 cylinders","fwd","gas",23.9,"red","full-size","automatic","coupe",0,2395,7.7811384,2004,14,3.1738784,0,0,0,0,0,0,0,196,2744,571.21
+"los angeles","LA long beach","2008 toyota camry le 4dr sedan","good","4 cylinders","Missing","gas",9.8,"black",NA,"automatic","Missing",0,5100,8.5369959,2008,10,2.2823825,1,0,1,0,1,0,0,100,1000,96.04
+"los angeles","central LA","2006 Toyota  camry","good","4 cylinders","fwd","gas",13.1,"white","compact","automatic","sedan",0,3200,8.0709057,2006,12,2.5726123,0,0,0,0,1,0,0,144,1728,171.61
+"los angeles","LA san gabriel","2005 toyota camry","Missing","Missing","Missing","gas",14.3842515945435,NA,NA,"automatic","Missing",0,4500,8.4118328,2005,13,2.6661339,0,0,0,0,0,0,0,169,2197,206.906693935126
+"los angeles","San Fernando","2003 toyota camry","Missing","Missing","Missing","gas",13.2,NA,NA,"automatic","Missing",0,3700,8.2160883,2003,15,2.5802169,0,0,0,0,0,0,0,225,3375,174.24
+"los angeles","San Fernando","1999 Toyota camry","good","4 cylinders","rwd","gas",20.5,"brown","compact","automatic","coupe",0,1000,6.9077554,1999,19,3.0204248,0,0,0,0,1,0,0,361,6859,420.25
+"los angeles","LA westside-southbay","2003 Toyota CAMRY XLE","Missing","Missing","Missing","gas",6.7,"white",NA,"automatic","Missing",0,1150,7.0475173,2003,15,1.9021075,0,1,0,0,0,0,0,225,3375,44.89
+"los angeles","central LA","2012 toyota camry","like new","4 cylinders","Missing","gas",8.30497360229492,"black",NA,"automatic","sedan",0,3115,8.0439844,2012,6,2.1168547,0,0,0,0,0,1,0,36,216,68.9725865348155
+"los angeles","central LA","2003 toyota camry","Missing","6 cylinders","fwd","gas",14.0816717147827,"black",NA,"automatic","sedan",0,2500,7.8240461,2003,15,2.6448741,0,0,0,0,0,0,1,225,3375,198.293478282912
+"los angeles","San Fernando","2015 Toyota Camry","Missing","4 cylinders","fwd","gas",3.4566,"grey",NA,"automatic","sedan",1,15995,9.6800318,2015,3,1.2402854,0,0,0,0,0,0,0,9,27,11.94808356
+"los angeles","LA long beach","2015 toyota camry le 4dr sedan","Missing","Missing","Missing","gas",4.96321296691895,NA,NA,"automatic","Missing",0,10800,9.2873011,2015,3,1.6020533,1,0,1,0,0,0,0,9,27,24.6334829549924
+"los angeles","LA westside-southbay","2005 Toyota Camry XLE","good","4 cylinders","fwd","gas",14.5741,"grey","mid-size","automatic","Missing",0,5900,8.6827078,2005,13,2.6792459,0,1,0,0,1,0,0,169,2197,212.40439081
+"los angeles","LA long beach","2014 toyota camry le 4dr sedan","Missing","Missing","Missing","gas",4.79168653488159,NA,NA,"automatic","Missing",0,9900,9.2002897,2014,4,1.5668825,1,0,1,0,0,0,0,16,64,22.9602598485656
+"los angeles","LA san gabriel","2012 toyota camry","excellent","4 cylinders","fwd","gas",8.30497360229492,NA,NA,"automatic","sedan",0,3190,8.0677757,2012,6,2.1168547,0,0,0,1,0,0,0,36,216,68.9725865348155
+"los angeles","central LA","2001 toyota camry","Missing","Missing","Missing","gas",16.2014694213867,NA,NA,"automatic","Missing",0,1400,7.2442274,2001,17,2.7851019,0,0,0,0,0,0,0,289,4913,262.487611412129
+"los angeles","central LA","2002 toyota camry","good","4 cylinders","Missing","gas",13.045,NA,NA,"automatic","Missing",0,2700,7.9010072,2002,16,2.5684049,0,0,0,0,1,0,0,256,4096,170.172025
+"los angeles","LA westside-southbay","1999 toyota camry","excellent","4 cylinders","fwd","gas",17.0199184417725,NA,NA,"automatic","Missing",0,500,6.2146082,1999,19,2.8343844,0,0,0,1,0,0,0,361,6859,289.677623764586
+"los angeles","LA san gabriel","2011 toyota camry le 4dr sedan","good","4 cylinders","fwd","gas",5.0212,"silver","full-size","automatic","sedan",0,9600,9.1695185,2011,7,1.6136689,1,0,1,0,1,0,0,49,343,25.21244944
+"los angeles","San Fernando","2003 toyota camry le","excellent","4 cylinders","fwd","gas",19.5211,"blue","full-size","automatic","sedan",0,2400,7.7832241,2003,15,2.9714959,1,0,0,1,0,0,0,225,3375,381.07334521
+"los angeles","LA long beach","1998 toyota camry le","Missing","Missing","Missing","gas",16.8242588043213,NA,NA,"automatic","Missing",0,2200,7.6962128,1998,20,2.8228219,1,0,0,0,0,0,0,400,8000,283.055684314782
+"los angeles","San Fernando","2015 Toyota Camry","Missing","4 cylinders","fwd","gas",3.6072,"white",NA,"automatic","sedan",1,15995,9.6800318,2015,3,1.2829318,0,0,0,0,0,0,0,9,27,13.01189184
+"los angeles",NA,"2004 Toyota Camry","like new","6 cylinders","fwd","gas",21.7337,"custom",NA,"automatic","sedan",1,3900,8.2687321,2004,14,3.0788641,0,0,0,0,0,1,1,196,2744,472.35371569
+"los angeles","San Fernando","2003 toyota camry","excellent","4 cylinders","Missing","gas",13.2,NA,NA,"automatic","Missing",0,3700,8.2160883,2003,15,2.5802169,0,0,0,1,0,0,0,225,3375,174.24
+"los angeles","LA westside-southbay","2003 Toyota Camry Xle","Missing","Missing","Missing","gas",14.0816717147827,NA,NA,"automatic","Missing",0,1100,7.0030656,2003,15,2.6448741,0,0,0,0,0,0,0,225,3375,198.293478282912
+"los angeles","San Fernando","2009 Toyota camry SE","like new","4 cylinders","Missing","gas",11.7,NA,NA,"automatic","Missing",0,7900,8.974618,2009,9,2.4595888,0,0,1,0,0,1,0,81,729,136.89
+"los angeles","central LA","2009 toyota camry le","like new","4 cylinders","Missing","gas",12.8708,"grey","full-size","automatic","sedan",0,6500,8.7795572,2009,9,2.5549612,1,0,0,0,0,1,0,81,729,165.65749264
+"los angeles","LA san gabriel","2009 toyota camry se","excellent","4 cylinders","fwd","gas",16.4503631591797,"black",NA,"automatic","Missing",0,1502,7.3145528,2009,9,2.8003476,0,0,1,1,0,0,0,81,729,270.614448068896
+"los angeles","LA westside-southbay","1991 toyota camry","Missing","Missing","Missing","gas",15.3,NA,NA,"automatic","wagon",0,2750,7.9193563,1991,27,2.7278528,0,0,0,0,0,0,0,729,19683,234.09
+"los angeles","central LA","2004 toyota camry solara","Missing","Missing","Missing","gas",20.1038,NA,NA,"automatic","Missing",0,2000,7.6009026,2004,14,3.0009089,0,0,0,0,0,0,0,196,2744,404.16277444
+"los angeles","San Fernando","2005 Toyota Camry LE","good","4 cylinders","Missing","gas",12.1,"white",NA,"automatic","Missing",0,4500,8.4118328,2005,13,2.4932055,1,0,0,0,1,0,0,169,2197,146.41
+"los angeles","central LA","2007 toyota camry","excellent","4 cylinders","Missing","gas",12,"white",NA,"automatic","sedan",0,5300,8.5754623,2007,11,2.4849067,0,0,0,1,0,0,0,121,1331,144
+"los angeles","LA long beach","2016 toyota camry le 4dr sedan","Missing","Missing","Missing","gas",4.24904441833496,NA,NA,"automatic","Missing",0,11000,9.3056507,2016,2,1.4466941,1,0,1,0,0,0,0,4,8,18.0543784689835
+"los angeles","San Fernando","2011 Toyota Camry","excellent","4 cylinders","Missing","gas",7.9,NA,NA,"automatic","Missing",0,8500,9.047821,2011,7,2.0668628,0,0,0,1,0,0,0,49,343,62.41
+"los angeles","LA san gabriel","2012 Toyota Camry se","Missing","4 cylinders","Missing","gas",8.30497360229492,NA,NA,"automatic","Missing",0,7500,8.922658,2012,6,2.1168547,0,0,1,0,0,0,0,36,216,68.9725865348155
+"los angeles","LA long beach","2009 toyota camry le","Missing","Missing","Missing","gas",16.4503631591797,NA,NA,"automatic","Missing",0,6000,8.6995144,2009,9,2.8003476,1,0,0,0,0,0,0,81,729,270.614448068896
+"los angeles","LA long beach","2004 toyota camry","Missing","Missing","Missing","gas",18,NA,NA,"automatic","Missing",0,3950,8.2814713,2004,14,2.8903718,0,0,0,0,0,0,0,196,2744,324
+"los angeles","central LA","2008 toyota camry le","Missing","Missing","Missing","gas",12.5481119155884,NA,NA,"automatic","Missing",0,4500,8.4118328,2008,10,2.5295701,1,0,0,0,0,0,0,100,1000,157.455112646131
+"los angeles","central LA","2004 Toyota Camry","Missing","4 cylinders","Missing","gas",19.4324,"blue",NA,"automatic","sedan",0,2900,7.972466,2004,14,2.9669418,0,0,0,0,0,0,0,196,2744,377.61816976
+"los angeles","San Fernando","2009 toyota camry","good","4 cylinders","Missing","gas",10,"grey",NA,"automatic","sedan",0,7000,8.8536654,2009,9,2.3025851,0,0,0,0,1,0,0,81,729,100
+"los angeles","San Fernando","2003 toyota camry le","Missing","Missing","Missing","gas",14.0816717147827,NA,NA,"automatic","Missing",0,3600,8.1886892,2003,15,2.6448741,1,0,0,0,0,0,0,225,3375,198.293478282912
+"los angeles","LA san gabriel","2004 toyota camry","Missing","Missing","Missing","gas",18,NA,NA,"automatic","Missing",0,3950,8.2814713,2004,14,2.8903718,0,0,0,0,0,0,0,196,2744,324
+"los angeles","San Fernando","2000 toyota camry","excellent","4 cylinders","Missing","gas",16.8334579467773,"brown","full-size","automatic","pickup",0,2700,7.9010072,2000,18,2.8233685,0,0,0,1,0,0,0,324,5832,283.365306445921
+"los angeles","LA san gabriel","2013 TOYOTA CAMRY LE","like new","4 cylinders","fwd","gas",3.5092,"black","full-size","automatic","sedan",0,10500,9.2591305,2013,5,1.2553881,1,0,0,0,0,1,0,25,125,12.31448464
+"los angeles","central LA","2004 Toyota Camry Le FwD 210Hp","excellent","Missing","fwd","gas",15.4080457687378,"white","full-size","automatic","sedan",0,1000,6.9077554,2004,14,2.7348897,0,0,0,1,0,0,0,196,2744,237.407874411518
+"los angeles","San Fernando","2003 toyota camry le","like new","4 cylinders","Missing","gas",3.2,"green","compact","automatic","coupe",0,7500,8.922658,2003,15,1.1631508,1,0,0,0,0,1,0,225,3375,10.24
+"los angeles","LA san gabriel","2008 toyota camry","like new","4 cylinders","Missing","gas",15.3123,"silver",NA,"automatic","sedan",0,1600,7.377759,2008,10,2.7286565,0,0,0,0,0,1,0,100,1000,234.46653129
+"los angeles","LA westside-southbay","2006 toyota camry le","Missing","Missing","Missing","gas",12.6671810150147,NA,NA,"automatic","Missing",0,5950,8.6911469,2006,12,2.5390146,1,0,0,0,0,0,0,144,1728,160.457474867148
+"los angeles","LA long beach","1998 TOYOTA CAMRY","like new","Missing","Missing","gas",16,NA,NA,"automatic","Missing",0,2200,7.6962128,1998,20,2.7725887,0,0,0,0,0,1,0,400,8000,256
+"los angeles","LA san gabriel","2012 Toyota Camry","excellent","4 cylinders","rwd","gas",2.3,"white","full-size","automatic","sedan",0,11800,9.3758545,2012,6,0.83290911,0,0,0,1,0,0,0,36,216,5.29
+"los angeles","LA san gabriel","1998 Toyota Camry LE 4 DR","excellent","4 cylinders","fwd","gas",18.374,"brown","mid-size","automatic","sedan",0,2895,7.9707403,1998,20,2.9109366,1,0,0,1,0,0,0,400,8000,337.603876
+"los angeles","LA westside-southbay","2008 Toyota Camry","Missing","6 cylinders","fwd","gas",13.1306,"grey","mid-size","automatic","sedan",1,7405,8.9099112,2008,10,2.5749454,0,0,0,0,0,0,1,100,1000,172.41265636
+"los angeles","LA san gabriel","2007 Toyota Camry","Missing","Missing","Missing","gas",12.2,NA,NA,"automatic","Missing",0,6700,8.8098631,2007,11,2.501436,0,0,0,0,0,0,0,121,1331,148.84
+"los angeles","North LA county","2004 toyota camry","Missing","Missing","Missing","gas",18,NA,NA,"automatic","Missing",0,3950,8.2814713,2004,14,2.8903718,0,0,0,0,0,0,0,196,2744,324
+"los angeles","central LA","2003 toyota camry","like new","4 cylinders","Missing","gas",3.2,"green",NA,"automatic","Missing",0,7500,8.922658,2003,15,1.1631508,0,0,0,0,0,1,0,225,3375,10.24
+"los angeles","LA long beach","2004 Toyota Camry SE","excellent","4 cylinders","fwd","gas",11.6,"white",NA,"automatic","sedan",0,4700,8.4553175,2004,14,2.451005,0,0,1,1,0,0,0,196,2744,134.56
+"los angeles","central LA","2008 toyota camry","Missing","Missing","Missing","gas",12.5481119155884,NA,NA,"automatic","Missing",0,4500,8.4118328,2008,10,2.5295701,0,0,0,0,0,0,0,100,1000,157.455112646131
+"los angeles","central LA","1999 Toyota CAMRY","excellent","6 cylinders","fwd","gas",10.2767,"grey","full-size","automatic","sedan",0,2900,7.972466,1999,19,2.3298793,0,0,0,1,0,0,1,361,6859,105.61056289
+"los angeles","LA westside-southbay","2006 toyota camry solara","Missing","Missing","Missing","gas",12.6671810150147,NA,NA,"automatic","Missing",0,4000,8.2940493,2006,12,2.5390146,0,0,0,0,0,0,0,144,1728,160.457474867148
+"los angeles","San Fernando","2004 toyota camry","Missing","Missing","Missing","gas",18,NA,NA,"automatic","Missing",0,3950,8.2814713,2004,14,2.8903718,0,0,0,0,0,0,0,196,2744,324
+"los angeles","San Fernando","2014 TOYOTA CAMRY SE SPORT","like new","4 cylinders","fwd","gas",10.3674,"white","mid-size","automatic","sedan",1,11995,9.3922453,2014,4,2.3386662,0,0,1,0,0,1,0,16,64,107.48298276
+"los angeles","LA westside-southbay","2012 TOYOTA CAMRY SE","like new","4 cylinders","Missing","gas",11.4512,"red","full-size","automatic","sedan",1,9900,9.2002897,2012,6,2.4380946,0,0,1,0,0,1,0,36,216,131.12998144
+"los angeles","central LA","2016 TOYOTA CAMRY SE","like new","4 cylinders","fwd","gas",2.9122,"black","full-size","automatic","sedan",0,15999,9.6802816,2016,2,1.0689088,0,0,1,0,0,1,0,4,8,8.48090884
+"los angeles","LA san gabriel","2007 toyota camry","good","6 cylinders","Missing","gas",13.9,"white","sub-compact","automatic","sedan",0,6500,8.7795572,2007,11,2.6318889,0,0,0,0,1,0,1,121,1331,193.21
+"los angeles","LA westside-southbay","2004 toyota camry xle","good","Missing","Missing","gas",20.7,"silver",NA,"automatic","Missing",0,3500,8.1605186,2004,14,3.0301337,0,1,0,0,1,0,0,196,2744,428.49
+"los angeles","San Fernando","2007 toyota camry","excellent","Missing","Missing","gas",10,NA,NA,"automatic","Missing",0,5499,8.6123219,2007,11,2.3025851,0,0,0,1,0,0,0,121,1331,100
+"los angeles","central LA","2017 toyota camry","like new","4 cylinders","fwd","gas",2,"black","full-size","automatic","sedan",0,17000,9.7409687,2017,1,0.69314718,0,0,0,0,0,1,0,1,1,4
+"los angeles","LA long beach","2004 toyota camry xle","excellent","4 cylinders","Missing","gas",11.5334,NA,NA,"automatic","Missing",0,5500,8.6125031,2004,14,2.4452472,0,1,0,1,0,0,0,196,2744,133.01931556
+"los angeles","San Fernando","2012 toyota camry LE","like new","4 cylinders","Missing","gas",8.30497360229492,"white",NA,"automatic","Missing",0,9490,9.1579943,2012,6,2.1168547,1,0,0,0,0,1,0,36,216,68.9725865348155
+"los angeles","San Fernando","1992 Toyota Camry","good","4 cylinders","fwd","gas",16.8,"grey","mid-size","automatic","sedan",0,1500,7.3132205,1992,26,2.8213789,0,0,0,0,1,0,0,676,17576,282.24
+"los angeles","San Fernando","2003 toyota camry","excellent","4 cylinders","Missing","gas",14.0816717147827,"white",NA,"automatic","Missing",0,3500,8.1605186,2003,15,2.6448741,0,0,0,1,0,0,0,225,3375,198.293478282912
+"los angeles","central LA","2009 Toyota Camry","Missing","Missing","Missing","gas",16.4503631591797,NA,NA,"automatic","Missing",0,8299,9.0238905,2009,9,2.8003476,0,0,0,0,0,0,0,81,729,270.614448068896
+"los angeles","LA san gabriel","2010 toyota camry le","like new","4 cylinders","Missing","gas",12,"white",NA,"automatic","sedan",0,7800,8.9618788,2010,8,2.4849067,1,0,0,0,0,1,0,64,512,144
+"los angeles","San Fernando","2006 TOYOTA CAMRY SE","Missing","6 cylinders","Missing","gas",16.56,NA,NA,"automatic","Missing",0,4100,8.3187418,2006,12,2.8069901,0,0,1,0,0,0,1,144,1728,274.2336
+"los angeles","central LA","2004 toyota camry","Missing","Missing","Missing","gas",18,NA,NA,"automatic","Missing",0,3950,8.2814713,2004,14,2.8903718,0,0,0,0,0,0,0,196,2744,324
+"los angeles","central LA","2004 toyota camry","good","4 cylinders","fwd","gas",11.6,"silver","mid-size","automatic","sedan",0,3800,8.2427559,2004,14,2.451005,0,0,0,0,1,0,0,196,2744,134.56
+"los angeles","San Fernando","2012 toyota camry le","Missing","Missing","Missing","gas",8.30497360229492,NA,NA,"automatic","Missing",0,8900,9.0938063,2012,6,2.1168547,1,0,0,0,0,0,0,36,216,68.9725865348155
+"los angeles","LA long beach","2005 toyota camry le","Missing","4 cylinders","Missing","gas",19,NA,NA,"automatic","Missing",0,2700,7.9010072,2005,13,2.9444389,1,0,0,0,0,0,0,169,2197,361
+"los angeles","LA westside-southbay","2016 TOYOTA CAMRY SE","good","4 cylinders","fwd","gas",6.5467,"white",NA,"automatic","sedan",1,14995,9.6154718,2016,2,1.8789611,0,0,1,0,1,0,0,4,8,42.85928089
+"los angeles","LA westside-southbay","2015 Toyota Camry","like new","Missing","fwd","gas",1.4319,"white",NA,"automatic","sedan",1,16225,9.6943083,2015,3,0.35900223,0,0,0,0,0,1,0,9,27,2.05033761
+"los angeles","LA san gabriel","2001 Toyota Camry le","Missing","Missing","Missing","gas",22.8,NA,NA,"automatic","Missing",0,1950,7.5755849,2001,17,3.1267605,1,0,0,0,0,0,0,289,4913,519.84
+"los angeles","central LA","1998 toyota camry","Missing","Missing","Missing","gas",16.8242588043213,NA,NA,"automatic","Missing",0,1900,7.5496092,1998,20,2.8228219,0,0,0,0,0,0,0,400,8000,283.055684314782
+"los angeles","San Fernando","2002 toyota camry","excellent","Missing","Missing","gas",14.3267211914062,NA,NA,"automatic","Missing",0,2500,7.8240461,2002,16,2.6621263,0,0,0,1,0,0,0,256,4096,205.254940096289
+"los angeles","central LA","2009 toyota camry le","excellent","4 cylinders","Missing","gas",8.1,NA,NA,"automatic","Missing",0,7500,8.922658,2009,9,2.0918641,1,0,0,1,0,0,0,81,729,65.61
+"los angeles","central LA","1996 toyota camry","excellent","Missing","Missing","gas",21.8999996185303,NA,NA,"automatic","Missing",0,1500,7.3132205,1996,22,3.0864866,0,0,0,1,0,0,0,484,10648,479.609983291626
+"los angeles","LA long beach","2003 toyota camry","good","4 cylinders","fwd","gas",16.2,"black","full-size","automatic","sedan",0,3500,8.1605186,2003,15,2.7850113,0,0,0,0,1,0,0,225,3375,262.44
+"los angeles","LA san gabriel","2007 Toyota Camry","excellent","Missing","Missing","gas",5.3,"grey",NA,"automatic","sedan",0,8495,9.0472326,2007,11,1.6677068,0,0,0,1,0,0,0,121,1331,28.09
+"los angeles","central LA","1999 toyota camry","excellent","4 cylinders","fwd","gas",12.4,"white","compact","automatic","sedan",0,2300,7.7406645,1999,19,2.5176964,0,0,0,1,0,0,0,361,6859,153.76
+"los angeles","San Fernando","2014 toyota camry","excellent","4 cylinders","fwd","gas",7.3,"white","mid-size","automatic","sedan",0,14900,9.6091166,2014,4,1.9878744,0,0,0,1,0,0,0,16,64,53.29
+"los angeles","central LA","2009 toyota camry","Missing","4 cylinders","Missing","gas",8.1,NA,NA,"automatic","Missing",0,7500,8.922658,2009,9,2.0918641,0,0,0,0,0,0,0,81,729,65.61
+"los angeles","North LA county","2001 toyota camry","excellent","6 cylinders","Missing","gas",27,NA,NA,"automatic","Missing",0,1500,7.3132205,2001,17,3.2958369,0,0,0,1,0,0,1,289,4913,729
+"los angeles","central LA","2012 toyota camry se","excellent","4 cylinders","Missing","gas",8.30497360229492,NA,NA,"automatic","Missing",0,6800,8.8246775,2012,6,2.1168547,0,0,1,1,0,0,0,36,216,68.9725865348155
+"los angeles","central LA","2008 TOYOTA CAMRY","Missing","Missing","Missing","gas",12.5481119155884,NA,NA,"automatic","Missing",0,2000,7.6009026,2008,10,2.5295701,0,0,0,0,0,0,0,100,1000,157.455112646131
+"los angeles","San Fernando","2002 toyota camry","excellent","4 cylinders","Missing","gas",16.1,NA,NA,"automatic","Missing",0,2700,7.9010072,2002,16,2.7788193,0,0,0,1,0,0,0,256,4096,259.21
+"los angeles","central LA","2001 Toyota Camry","Missing","Missing","Missing","gas",16.2014694213867,NA,NA,"automatic","Missing",0,1400,7.2442274,2001,17,2.7851019,0,0,0,0,0,0,0,289,4913,262.487611412129

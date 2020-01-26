@@ -1,0 +1,41 @@
+---
+title: "Airbnb prediction models"
+author: "Oscar Leal 1903161"
+date: "1/26/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data comes from http://insideairbnb.com/
+
+### Task A
+
+We first have the airbnb apartments data from London already cleaned with the file *airbnb_london_cleaner.R* priorly provided.
+
+```{r}
+df <- readRDS('airbnb_london_listing.rds')
+```
+
+We then run an automated analysis report with the library DataExplorer *(coming from http://boxuancui.github.io/DataExplorer/)* in order to spot potential next decisions.
+
+```{r, eval=FALSE}
+library(DataExplorer)
+create_report(df)
+```
+
+[Open DataExplorer Report](report.html)
+
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

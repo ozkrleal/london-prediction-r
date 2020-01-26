@@ -21,7 +21,8 @@ getwd()
 data<-read.csv("listings.csv")
 drops <- c("host_thumbnail_url","host_picture_url","listing_url","thumbnail_url","medium_url","picture_url","xl_picture_url","host_url","last_scraped","description", "experiences_offered", "neighborhood_overview", "notes", "transit", "access", "interaction", "house_rules", "host_about", "host_response_time", "name", "summary", "space", "host_location")
 data<-data[ , !(names(data) %in% drops)]
-write.csv(data,file="airbnb_london_listing.csv")
+saveRDS(data, file="airbnb_london_listing.rds")
+#write.csv(data,file="airbnb_london_listing.csv")
 
 #####################################
 #opening dfset
@@ -71,5 +72,6 @@ df<-cbind(df,as.data.frame(do.call(rbind, lapply(lapply(df$amenities, factor, le
 drops <- c("amenities","translation missing: en.hosting_amenity_49","translation missing: en.hosting_amenity_50")
 df<-df[ , !(names(df) %in% drops)]
 
-#write csv
-write.csv(df,file="airbnb_london_cleaned.csv")
+#write csv or RDS
+#write.csv(df,file="airbnb_london_cleaned.csv")
+saveRDS(df,file="airbnb_london_cleaned.csv")
