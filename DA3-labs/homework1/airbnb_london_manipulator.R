@@ -4,7 +4,6 @@ library(tidyverse)
 library(stargazer)
 library(Hmisc)
 
-
 #location folders
 #data_in  <- paste0(dir,"cases_studies_public/airbnb/clean/")
 #data_out <- paste0(dir,"textbook_work/ch14/airbnb/")
@@ -17,15 +16,23 @@ source("helper_functions/theme_bg.R")
 data <- readRDS("homework1/airbnb_london_listing.rds")
 #-------------------------------------------------------
 
-table(data$f_property_type)
+table(data$property_type)
+
 data <- data %>%
   filter(property_type %in% c("Apartment", "Condominium", "Serviced apartment", "Loft"))
 # rename Loft or Serviced apartment to to House
 factor(data$property_type)
 
 data <- data %>%
-  mutate(
-        f_property_type = factor(property_type))
+  mutate(property_type = ifelse(data$property_type %in% c("Serviced apartment", "Condominium"), 
+                                "Loft", data$property_type),
+         f_property_type = factor(property_type))
+
+table(data$f_property_type)
+
+data <- data %>%
+  mutate(property_type = ifelse(data$property_type == 2, "Apartment", ifelse(data$property_type == 28, "Loft", data$property_type)),
+         f_property_type = factor(property_type))
 
 #Room type as factor
 table(data$room_type)
@@ -116,14 +123,16 @@ saveRDS(data, "homework1/airbnb_london_workfile.rds")
 #--------------------------------
 data <- readRDS("homework1/airbnb_london_workfile.rds")
 hackneydata <- data %>%
-  filter(neighbourhood_cleansed == "Hackney")
+  filter(neighbourhood_cleansed == "Hackney") %>% filter (!is.na(price)) %>% filter(price > 0)
 saveRDS(hackneydata, "homework1/airbnb_hackney_only_workfile.rds")
 
-data <- data %>%
+londonbuthackney <- data %>%
   filter(neighbourhood_cleansed != "Hackney") %>% filter(!is.na(price)) %>% filter(price > 0)
-saveRDS(data, "homework1/airbnb_london_not_hackney_workfile.rds")
+saveRDS(londonbuthackney, "homework1/airbnb_london_not_hackney_workfile.rds")
 
-#create_report(data)
+data <- londonbuthackney
+
+create_report(data, y = "price")
 
 #
 #####################
@@ -335,17 +344,16 @@ for (i in 1:length(categoricals)) {
 # Change Infinite values with NaNs
 for (j in 1:ncol(data) ) data.table::set(data, which(is.infinite(data[[j]])), j, NA)
 
-saveRDS(data, "homework1/airbnb_hackney_workfile_adj.rds")
+#saveRDS(data, "homework1/airbnb_hackney_workfile_adj.rds")
+saveRDS(data, "homework1/airbnb_london_not_hackney_workfile_adj.rds")
 
 #--------------------------------------------------------------------
 
 colnames(data)
 
-create_report(data)
-
+#create_report(data)
+#create_report(data, y= "price)
 ## check report html
-
-colnames(data)
 
 head(data)
 
