@@ -97,6 +97,7 @@ data %>%
 data <- data %>%
   drop_na(n_review_scores_rating)
 
+
 data <- data %>%
   filter(f_room_type != "Hotel room")
 
@@ -246,15 +247,16 @@ amenities <-  grep("^d_.*", names(data), value = TRUE)
 # Look for interactions
 ################################################
 
+colnames(data)
 #Look up room type interactions
-p1 <- price_diff_by_variables2(data, "f_room_type2", "d_familykidfriendly", "Room type", "Family kid friendly")
+p1 <- price_diff_by_variables2(data, "f_room_type2", "d_balcony", "Room type", "Balcony")
 p2 <- price_diff_by_variables2(data, "f_room_type2", "f_property_type", "Room type", "Property type")
 #Look up canelation policy
-p3 <- price_diff_by_variables2(data, "f_cancellation_policy", "d_familykidfriendly", "Cancellation policy", "Family kid friendly")
-p4 <- price_diff_by_variables2(data, "f_cancellation_policy", "d_tv", "Cancellation policy", "TV")
+p3 <- price_diff_by_variables2(data, "f_cancellation_policy", "d_balcony", "Cancellation policy", "Balcony")
+p4 <- price_diff_by_variables2(data, "f_cancellation_policy", "d_cabletv", "Cancellation policy", "Cable TV")
 #Look up property type
 p5 <- price_diff_by_variables2(data, "f_property_type", "d_cats", "Property type", "Cats")
-p6 <- price_diff_by_variables2(data, "f_property_type", "d_dogs", "Property type", "Dogs")
+p6 <- price_diff_by_variables2(data, "f_property_type", "d_breakfast", "Property type", "Breakfast")
 
 ch14_airbnb_interactions <- plot_grid(p1, p2, p3, p4, p5, p6, nrow=3, ncol=2)
 save_plot(paste0(output, "ch14_airbnb_interactions.png"), ch14_airbnb_interactions, nrow=3, ncol=2,
