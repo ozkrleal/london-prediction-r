@@ -248,6 +248,7 @@ amenities <-  grep("^d_.*", names(data), value = TRUE)
 ################################################
 
 colnames(data)
+
 #Look up room type interactions
 p1 <- price_diff_by_variables2(data, "f_room_type2", "d_balcony", "Room type", "Balcony")
 p2 <- price_diff_by_variables2(data, "f_room_type2", "f_property_type", "Room type", "Property type")
@@ -271,10 +272,10 @@ ch14_airbnb_interactions
 
 
 # dummies suggested by graphs
-X1  <- c("f_room_type*f_property_type",  "f_room_type*d_familykidfriendly")
+X1  <- c("f_room_type*f_property_type",  "f_room_type*d_balcony")
 
 # Additional interactions of factors and dummies
-X2  <- c("d_airconditioning*f_property_type", "d_cats*f_property_type", "d_dogs*f_property_type")
+X2  <- c("d_balcony*f_property_type", "d_cats*f_property_type", "d_breakfast*f_property_type")
 X3  <- c(paste0("(f_property_type + f_room_type + f_cancellation_policy + f_bed_type) * (",
                 paste(amenities, collapse=" + "),")"))
 
@@ -365,6 +366,7 @@ for (type in c("lev","log")) {
       prediction_train <- predict(model, newdata = data_train)
       prediction_test <- predict(model, newdata = data_test)
       
+
       # Criteria evaluation
       if (type=="lev") {
         rmse_train[k] <- mse_lev(prediction_train, data_train[,yvar] %>% pull)**(1/2)

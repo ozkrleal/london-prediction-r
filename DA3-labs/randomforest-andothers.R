@@ -34,6 +34,7 @@
 rm(list=ls())
 
 
+library(DataExplorer)
 library(rattle)
 library(tidyverse)
 library(caret)
@@ -65,9 +66,9 @@ source("airbnb_prediction_functions.R")
 # Used area
 area <- "london_not_hackney"
 data <- readRDS(paste0("homework1/airbnb_", area, "_workfile_adj.rds")) %>%
-  mutate_if(is.character, factor) %>%
-  filter(!is.na(price))
+  mutate_if(is.character, factor) 
 
+datahackney <- readRDS("homework1/airbnb_hackney_only_workfile_adj.rds") %>% mutate_if(is.character, factor)
 
 count_missing_values <- function(data) {
   num_missing_values <- map_int(data, function(x) sum(is.na(x)))
@@ -76,10 +77,14 @@ count_missing_values <- function(data) {
 
 count_missing_values(data)
 
+count_missing_values(datahackney)
+
 # Sample definition and preparation ---------------------------------------
 
 # We focus on normal apartments, n<8
-data <- data %>% filter(n_accommodates < 8)
+data <- data %>% filter(n_accommodates < 6)
+
+datahackney <- datahackney %>% filter(n_accommodates < 6)
 
 # copy a variable - purpose later, see at variable importance
 data <- data %>% mutate(n_accommodates_copy = n_accommodates)
@@ -103,14 +108,31 @@ set.seed(2801)
 # try <- createDataPartition(data$price, p = 0.2, list = FALSE)
 #data <- data[try, ]
 
+#selected_boroughs <- c("Hackney", "Camden")
+
+
+#datahackney <- datahackney %>% filter(
+#  f_neighbourhood_cleansed %in% selected_boroughs)
+#datahackney <- datahackney %>% 
+#  mutate(
+#    f_neighbourhood_cleansed = factor(
+#      f_neighbourhood_cleansed, levels = selected_boroughs))
+
+
 # CUSTOM NEIGHBORHOOD FILTER FOR SMALLER RUNTIMES
-selected_boroughs <- c("Hackney", "Camden")
-data <- data %>% filter(
-  f_neighbourhood_cleansed %in% selected_boroughs)
-data <- data %>% 
-  mutate(
-    f_neighbourhood_cleansed = factor(
-      f_neighbourhood_cleansed, levels = selected_boroughs))
+
+#data <- data %>% filter(
+#  f_neighbourhood_cleansed %in% selected_boroughs)
+#data <- data %>% 
+#  mutate(
+#    f_neighbourhood_cleansed = factor(
+#      f_neighbourhood_cleansed, levels = selected_boroughs))
+
+
+## chose westminster to opt out because its an expensive district
+data <- data %>% filter(!f_neighbourhood_cleansed == 'Westminster')
+#table(data2$f_neighbourhood_cleansed)
+plot_missing(data)
 
 train_indices <- createDataPartition(data$price, p = 0.7, list = FALSE)
 data_train <- data[train_indices, ]
@@ -412,56 +434,7 @@ dev.off()
 
 
 
-# a side investigation -------------------------------------------------------
-# with an important variable duplicated: how does it change?
-
-##############################
-# 4) varimp plot  w copy, top 10
-##############################
-# repeat model B
-# done smartly: we take mtry min.node.size from the final model
-
-set.seed(1234)
-rf_model_2_with_copy <- train(
-  formula(paste0("price ~", paste0(c(predictors_2, "n_accommodates_copy"), collapse = " + "))),
-  data = data_train,
-  method = "ranger",
-  trControl = train_control,
-  tuneGrid = data.frame(
-    .mtry = rf_model_2$finalModel$mtry,
-    .splitrule = "variance",
-    .min.node.size = rf_model_2$finalModel$min.node.size
-  ),
-  importance = "impurity"
-)
-
-rf_model_2_with_copy_var_imp <- importance(rf_model_2_with_copy$finalModel)
-rf_model_2_with_copy_var_imp_df <- data.frame(varname = names(rf_model_2_with_copy_var_imp),
-                                              imp = rf_model_2_with_copy_var_imp) %>%
-  arrange(desc(imp)) %>%
-  mutate(imp_percentage = imp/sum(imp))
-
-
-# only keep top 10 as well
-rf_model_2_with_copy_var_imp_plot <- ggplot(rf_model_2_with_copy_var_imp_df[1:10,],
-                                            aes(x=reorder(varname, imp), y=imp_percentage)) +
-  geom_point(color=color[3], size=2) +
-  geom_segment(aes(x=varname,xend=varname,y=0,yend=imp_percentage), color=color[3], size=1.5) +
-  ylab("Importance") +
-  xlab("Variable Name") +
-  coord_flip() +
-  scale_y_continuous(labels = scales::percent) +
-  theme_bg() +
-  theme(axis.text.x = element_text(size=4), axis.text.y = element_text(size=4),
-        axis.title.x = element_text(size=4), axis.title.y = element_text(size=4))
-rf_model_2_with_copy_var_imp_plot
-ggsave(paste0(output, "rf_varimp_withcopy.png"), width=mywidth_small, height=myheight_small, unit="cm", dpi=1200)
-cairo_ps(filename = paste0(output, "rf_varimp_withcopy.eps"),
-         width = mywidth_small, height = myheight_small, pointsize = 8,
-         fallback_resolution = 1200)
-print(rf_model_2_with_copy_var_imp_plot)
-dev.off()
-
+#optional things deleted
 
 #########################################################################################
 # Partial Dependence Plots -------------------------------------------------------
@@ -486,11 +459,12 @@ pdp::partial(rf_model_2, pred.var = "f_room_type", pred.grid = distinct_(data_tr
 # NOTE  we do this on the holdout set. 
 
 # ---- cheaper or more expensive flats - not used in book
-data_holdout_w_prediction <- data_holdout %>%
-  mutate(predicted_price = predict(rf_model_2, newdata = data_holdout))
+data_holdout_w_prediction <- na.omit(data_holdout) %>%
+  mutate(predicted_price = predict(rf_model_2, newdata = na.omit(data_holdout)))
 
 ggplot(data_holdout_w_prediction, aes(x = price, y = price - predicted_price)) +
-  geom_point(alpha = 0.01, color = color[3]) +
+  geom_point(alpha = 0.15, color = color[3]) +
+  geom_smooth(method = "lm", se = FALSE) +
   geom_vline(xintercept = median(data_holdout_w_prediction[["price"]]), linetype = "dashed") +
   theme_bw()
 
@@ -508,7 +482,7 @@ a <- data_holdout_w_prediction %>%
 
 
 b <- data_holdout_w_prediction %>%
-  filter(f_neighbourhood_cleansed %in% c("Westminster", "Camden", "Kensington and Chelsea", "Tower Hamlets", "Hackney", "Newham")) %>%
+  filter(f_neighbourhood_cleansed %in% c("Westminster", "Camden", "Kensington and Chelsea", "Tower Hamlets", "Newham")) %>%
   group_by(f_neighbourhood_cleansed) %>%
   summarise(
     rmse = RMSE(predicted_price, price),
@@ -575,7 +549,8 @@ system.time({
     formula(paste0("price ~", paste0(predictors_2, collapse = " + "))),
     data = data_train,
     method = "lm",
-    trControl = train_control
+    trControl = train_control,
+    na.action = na.omit
   )
 })
 
@@ -597,7 +572,8 @@ system.time({
     method = "glmnet",
     preProcess = c("center", "scale"),
     tuneGrid =  expand.grid("alpha" = 1, "lambda" = seq(0.01, 0.25, by = 0.01)),
-    trControl = train_control
+    trControl = train_control,
+    na.action = na.omit
   )
 })
 
@@ -613,7 +589,7 @@ lasso_coeffs_non_null <- lasso_coeffs[!lasso_coeffs$lasso_coefficient == 0,]
 
 regression_coeffs <- merge(ols_model_coeffs_df, lasso_coeffs_non_null, by = "variable", all=TRUE)
 regression_coeffs %>%
-  write.csv(file = paste0(output, "regression_coeffs.csv"))
+  saveRDS("regression_coeffs.rds")
 
 # CART
 set.seed(1234)
@@ -623,7 +599,8 @@ system.time({
     data = data_train,
     method = "rpart",
     tuneLength = 10,
-    trControl = train_control
+    trControl = train_control,
+    na.action = na.omit
   )
 })
 
@@ -644,7 +621,8 @@ system.time({
                      method = "gbm",
                      trControl = train_control,
                      verbose = FALSE,
-                     tuneGrid = gbm_grid)
+                     tuneGrid = gbm_grid,
+                     na.action = na.omit)
 })
 gbm_model
 
@@ -706,8 +684,8 @@ result_4 <- imap(final_models, ~{
   rename("CV RMSE" = ".")
 
 kable(x = result_4, format = "latex", digits = 3, booktabs=TRUE, linesep = "") %>%
-  cat(.,file= paste0(output,"horse_race_of_models_cv_rmse.tex"))
+  cat(.,file= "horse_race_of_models_cv_rmse.tex")
 
 
 # evaluate preferred model on the holdout set -----------------------------
-RMSE(predict(rf_model_2, newdata = data_holdout), data_holdout[["price"]])
+RMSE(predict(lasso_model, newdata = datahackney), datahackney[["price"]])
