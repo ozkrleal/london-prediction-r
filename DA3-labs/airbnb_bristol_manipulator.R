@@ -12,10 +12,16 @@ library(Hmisc)
 source("helper_functions/theme_bg.R")
 
 #import data
-data <- readRDS("airbnb_bristol_cleaned.rds")
+data <- readRDS("airbnb_manchester_cleaned.rds")
+#data <- readRDS("airbnb_bristol_cleaned.rds")
 #-------------------------------------------------------
 
 table(data$property_type)
+
+#neighbor drop for manchester
+drops <- c("neighbourhood_cleansed","f_neighbourhood_cleansed","city")
+data <- data[ , !(names(data) %in% drops)]
+
 
 data <- data %>%
   filter(property_type %in% c("Apartment", "Condominium", "Serviced apartment", "Loft"))
@@ -55,8 +61,7 @@ table(data$bed_type)
 data <- data %>%
   mutate(
     bed_type = ifelse(bed_type %in% c("Futon", "Pull-out Sofa", "Airbed"), "Couch", bed_type),
-    f_bed_type = factor(bed_type),
-    f_neighbourhood_cleansed = factor(neighbourhood_cleansed))
+    f_bed_type = factor(bed_type))
 
 #---------------------------------------------------------------------------------------------------------------------------
 ## Create Numerical variables
@@ -91,7 +96,13 @@ data <- data %>%
                                 as.Date(first_review ,format="%Y-%m-%d")))
 
 # create dummy vars
-dummies <- names(data)[seq(83,225)]
+#this is for manchester
+dummies <- names(data)[seq(74,113)]
+
+
+#this is for bristol
+#dummies <- names(data)[seq(83,225)]
+
 data <- data %>%
   mutate_at(vars(dummies), funs("d"= (.)))
 
@@ -105,25 +116,27 @@ colnames(data)[dnames_i] <- paste0("d_", tolower(gsub("[^[:alnum:]_]", "",dummie
 # keep columns if contain d_, n_,f_, p_, usd_ and some others
 data <- data %>%
   select(matches("^d_.*|^n_.*|^f_.*|^p_.*|^usd_.*"), price,
-         neighbourhood_cleansed,cancellation_policy,room_type,property_type)
+         cancellation_policy,room_type,property_type)
 
 #left dollar signs outside, continous values!
 data$price = as.numeric(gsub("[\\$,]", "", data$price))
 data$usd_cleaning_fee = as.numeric(gsub("[\\$,]", "", data$price))
 data$usd_price_day = as.numeric(gsub("[\\$,]", "", data$price))
 
-saveRDS(data, "airbnb_bristol_workfile.rds")
+#saveRDS(data, "airbnb_bristol_workfile.rds")
+saveRDS(data, "airbnb_manchester_workfile.rds")
 
 ##################################
 # DESCRIBE
 
 #--------------------------------
-data <- readRDS("airbnb_bristol_workfile.rds")
+#data <- readRDS("airbnb_bristol_workfile.rds")
+data <- readRDS("airbnb_manchester_workfile.rds")
 
 data <- data %>%
   filter(!is.na(price)) %>% filter(price > 0)
-saveRDS(data, "airbnb_bristol_workfile.rds")
-
+#saveRDS(data, "airbnb_bristol_workfile.rds")
+saveRDS(data, "airbnb_manchester_workfile.rds")
 
 #create_report(data, y = "price")
 
@@ -152,8 +165,8 @@ R_F14_h_lnprice <- ggplot(data, aes(ln_price)) +
   xlab("Log price") +
   theme_bg()
 
-ggsave("homework1/bristol_R_F14_h_lnprice.png", width=mywidth_large, height=myheight_large, units = "cm", dpi = 1200)
-cairo_ps(filename = "homework1/bristol_R_F14_h_lnprice.eps",
+ggsave("homework1/manchester_R_F14_h_lnprice.png", width=mywidth_large, height=myheight_large, units = "cm", dpi = 1200)
+cairo_ps(filename = "homework1/manchester_R_F14_h_lnprice.eps",
          width = mywidth_large, height = myheight_large, pointsize = 12,
          fallback_resolution = 1200)
 print(R_F14_h_lnprice)
@@ -165,8 +178,8 @@ R_F14_h_price <- ggplot(data, aes(price)) +
   xlab("Price") +
   theme_bg()
 
-ggsave("homework1/bristol_R_F14_h_price.png", width=mywidth_large, height=myheight_large, units = "cm", dpi = 1200)
-cairo_ps(filename = "homework1/bristol_R_F14_h_price.eps",
+ggsave("homework1/manchester_R_F14_h_price.png", width=mywidth_large, height=myheight_large, units = "cm", dpi = 1200)
+cairo_ps(filename = "homework1/manchester_R_F14_h_price.eps",
          width = mywidth_large, height = myheight_large, pointsize = 12,
          fallback_resolution = 1200)
 print(R_F14_h_price)
@@ -191,8 +204,8 @@ R_14_s_n_accommodates <- ggplot(data = data, aes(x=n_accommodates, y=price)) +
   geom_smooth(method="lm", colour=color[1], se=FALSE)+
   theme_bg()
 
-ggsave("homework1/bristol_R_14_s_n_accommodates.png", width=mywidth_large, height=myheight_large, units = "cm", dpi = 1200)
-cairo_ps(filename = "homework1/bristol_R_14_s_n_accommodates.eps",
+ggsave("homework1/manchester_R_14_s_n_accommodates.png", width=mywidth_large, height=myheight_large, units = "cm", dpi = 1200)
+cairo_ps(filename = "homework1/manchester_R_14_s_n_accommodates.eps",
          width = mywidth_large, height = myheight_large, pointsize = 12,
          fallback_resolution = 1200)
 print(R_14_s_n_accommodates)
@@ -345,7 +358,8 @@ for (i in 1:length(categoricals)) {
 for (j in 1:ncol(data) ) data.table::set(data, which(is.infinite(data[[j]])), j, NA)
 
 #saveRDS(data, "homework1/airbnb_hackney_workfile_adj.rds")
-
+saveRDS(data, "homework1/airbnb_manchester_workfile_adj.rds")
+#saveRDS(data, 'homework1/airbnb_bristol_workfile_adj.rds')
 #--------------------------------------------------------------------
 
 colnames(data)
@@ -357,9 +371,17 @@ plot_correlation(data)
 ## check report html
 
 
-saveRDS(data, "homework1/airbnb_bristol_workfile_adj.rds")
+manchesterdata <-readRDS('homework1/airbnb_manchester_workfile_adj.rds')
+mixed <- manchesterdata
+
+
+#--------------------------------------------------------------------
+
+
 londondata<- readRDS('homework1/airbnb_london_not_hackney_workfile_adj.rds')
 bristoldata<- readRDS('homework1/airbnb_bristol_workfile_adj.rds')
+
+londondata <- londondata[ , !(names(londondata) %in% drops)]
 
 
 mixeddata <- smartbind(londondata, bristoldata)
@@ -367,3 +389,5 @@ mixeddata <- smartbind(londondata, bristoldata)
 mixeddata <- mixeddata %>% select(names(londondata))
 
 saveRDS(mixeddata, "homework1/airbnb_londonbristol_workfile_adj.rds")
+#saveRDS(data, "homework1/airbnb_manchester_workfile_adj.rds")
+

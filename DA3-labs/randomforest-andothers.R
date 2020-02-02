@@ -64,11 +64,13 @@ source("airbnb_prediction_functions.R")
 #########################################################################################
 
 # Used area
-area <- "london_not_hackney"
+area <- "londonbristol"
+#area <- "london_not_hackney"
 data <- readRDS(paste0("homework1/airbnb_", area, "_workfile_adj.rds")) %>%
   mutate_if(is.character, factor) 
 
-datahackney <- readRDS("homework1/airbnb_hackney_only_workfile_adj.rds") %>% mutate_if(is.character, factor)
+#datahackney <- readRDS("homework1/airbnb_hackney_only_workfile_adj.rds") %>% mutate_if(is.character, factor)
+
 
 count_missing_values <- function(data) {
   num_missing_values <- map_int(data, function(x) sum(is.na(x)))
@@ -265,7 +267,7 @@ rf_tuning_modelB <- rf_model_2$results %>%
 
 kable(x = rf_tuning_modelB, format = "latex", digits = 2, caption = "CV RMSE") %>%
   add_header_above(c(" ", "vars" = 3)) %>%
-  cat(.,file= "rf_tuning_modelB.tex")
+  cat(.,file= "bristol_londonrf_tuning_modelB.tex")
 
 
 # Turning parameter choice 1
@@ -280,7 +282,7 @@ dimnames = list(c("Model A", "Model B"),
                 c("Min vars","Min nodes"))
 )
 kable(x = result_1, format = "latex", digits = 3) %>%
-  cat(.,file= "rf_models_turning_choices.tex")
+  cat(.,file= "bristol_londonrf_models_turning_choices.tex")
 
 # Turning parameter choice 2
 result_2 <- matrix(c(mean(results$values$`model_1~RMSE`),
@@ -293,7 +295,7 @@ dimnames = list(c("Model A", "Model B"),
 
 
 kable(x = result_2, format = "latex", digits = 3) %>%
-  cat(.,file= "rf_models_rmse.tex")
+  cat(.,file= "bristol_londonrf_models_rmse.tex")
 
 
 #########################################################################################
@@ -353,7 +355,7 @@ rf_model_2_var_imp_plot <- ggplot(rf_model_2_var_imp_df[rf_model_2_var_imp_df$im
   theme(axis.text.x = element_text(size=4), axis.text.y = element_text(size=4),
         axis.title.x = element_text(size=4), axis.title.y = element_text(size=4))
 rf_model_2_var_imp_plot
-ggsave( "rf_varimp1.png", width=mywidth_small, height=myheight_small, unit="cm", dpi=1200)
+ggsave( "bristol_londonrf_varimp1.png", width=mywidth_small, height=myheight_small, unit="cm", dpi=1200)
 cairo_ps(filename = paste0(output, "rf_varimp1.eps"),
          width = mywidth_small, height = myheight_small, pointsize = 8,
          fallback_resolution = 1200)
@@ -377,8 +379,8 @@ rf_model_2_var_imp_plot_b <- ggplot(rf_model_2_var_imp_df[1:10,], aes(x=reorder(
   theme(axis.text.x = element_text(size=4), axis.text.y = element_text(size=4),
         axis.title.x = element_text(size=4), axis.title.y = element_text(size=4))
 rf_model_2_var_imp_plot_b
-ggsave(paste0(output, "rf_varimp1_b.png"), width=mywidth_small, height=myheight_small, unit="cm", dpi=1200)
-cairo_ps(filename = paste0(output, "rf_varimp1_b.eps"),
+ggsave(paste0(output, "bristol_londonrf_varimp1_b.png"), width=mywidth_small, height=myheight_small, unit="cm", dpi=1200)
+cairo_ps(filename = paste0(output, "bristol_londonrf_varimp1_b.eps"),
          width = mywidth_small, height = myheight_small, pointsize = 8,
          fallback_resolution = 1200)
 print(rf_model_2_var_imp_plot_b)
@@ -425,8 +427,8 @@ rf_model_2_var_imp_grouped_plot <-
         axis.title.x = element_text(size=8), axis.title.y = element_text(size=8))
 
 rf_model_2_var_imp_grouped_plot
-ggsave(paste0(output, "rf_varimp_grouped1.png"), width=mywidth_large, height=myheight_large, unit="cm", dpi=1200)
-cairo_ps(filename = paste0(output, "rf_varimp_grouped1.eps"),
+ggsave(paste0(output, "bristol_londonrf_varimp_grouped1.png"), width=mywidth_large, height=myheight_large, unit="cm", dpi=1200)
+cairo_ps(filename = paste0(output, "bristol_londonrf_varimp_grouped1.eps"),
          width = mywidth_large, height = myheight_large, pointsize = 12,
          fallback_resolution = 1200)
 print(rf_model_2_var_imp_grouped_plot)
@@ -459,76 +461,151 @@ pdp::partial(rf_model_2, pred.var = "f_room_type", pred.grid = distinct_(data_tr
 # NOTE  we do this on the holdout set. 
 
 # ---- cheaper or more expensive flats - not used in book
-data_holdout_w_prediction <- na.omit(data_holdout) %>%
-  mutate(predicted_price = predict(rf_model_2, newdata = na.omit(data_holdout)))
+predictwithHoldoutOrOtherData <- function(data_to_predict, model) {
+  data_holdout_w_prediction <- na.omit(data_to_predict) %>%
+    mutate(predicted_price = predict(model, newdata = na.omit(data_to_predict)))
+  
+  print(ggplot(data_holdout_w_prediction, aes(x = price, y = price - predicted_price)) +
+    geom_point(alpha = 0.15, color = color[3]) +
+    geom_smooth(method = "lm", se = FALSE) +
+    geom_vline(xintercept = median(data_holdout_w_prediction[["price"]]), linetype = "dashed") +
+    theme_bw())
+  
+  print(describe(data_holdout_w_prediction$n_accommodates))
+  
+  ######### create nice summary table of heterogeneity
+  a <- data_holdout_w_prediction %>%
+    mutate(is_low_size = ifelse(n_accommodates <= 3, "small apt", "large apt")) %>%
+    group_by(is_low_size) %>%
+    summarise(
+      rmse = RMSE(predicted_price, price),
+      mean_price = mean(price),
+      rmse_norm = RMSE(predicted_price, price) / mean(price)
+    )
+  
+  
+  b <- data_holdout_w_prediction %>%
+    filter(f_neighbourhood_cleansed %in% c("Westminster", "Camden", "Kensington and Chelsea", "Tower Hamlets", "Newham")) %>%
+    group_by(f_neighbourhood_cleansed) %>%
+    summarise(
+      rmse = RMSE(predicted_price, price),
+      mean_price = mean(price),
+      rmse_norm = rmse / mean_price
+    )
+  
+  c <- data_holdout_w_prediction %>%
+    filter(f_property_type %in% c("Apartment", "House")) %>%
+    group_by(f_property_type) %>%
+    summarise(
+      rmse = RMSE(predicted_price, price),
+      mean_price = mean(price),
+      rmse_norm = rmse / mean_price
+    )
+  
+  
+  d <- data_holdout_w_prediction %>%
+    summarise(
+      rmse = RMSE(predicted_price, price),
+      mean_price = mean(price),
+      rmse_norm = RMSE(predicted_price, price) / mean(price)
+    )
+  
+  # Save output
+  colnames(a) <- c("", "RMSE", "Mean price", "RMSE/price")
+  colnames(b) <- c("", "RMSE", "Mean price", "RMSE/price")
+  colnames(c) <- c("", "RMSE", "Mean price", "RMSE/price")
+  d<- cbind("All", d)
+  colnames(d) <- c("", "RMSE", "Mean price", "RMSE/price")
+  
+  line1 <- c("Type", "", "", "")
+  line2 <- c("Apartment size", "", "", "")
+  line3 <- c("Borough", "", "", "")
+  
+  result_3 <- rbind(line2, a, line1, c, line3, b, d) %>%
+    transform(RMSE = as.numeric(RMSE), `Mean price` = as.numeric(`Mean price`),
+              `RMSE/price` = as.numeric(`RMSE/price`))
+  print(result_3)
+  
+  options(knitr.kable.NA = '')
+  kable(x = result_3, format = "latex", booktabs=TRUE, linesep = "",digits = c(0,2,1,2), col.names = c("","RMSE","Mean price","RMSE/price")) %>%
+    cat(.,file= paste0(output, "performance_across_subsamples.tex"))
+  options(knitr.kable.NA = NULL)
+}
 
-ggplot(data_holdout_w_prediction, aes(x = price, y = price - predicted_price)) +
-  geom_point(alpha = 0.15, color = color[3]) +
-  geom_smooth(method = "lm", se = FALSE) +
-  geom_vline(xintercept = median(data_holdout_w_prediction[["price"]]), linetype = "dashed") +
-  theme_bw()
+predictOtherData <- function(data_to_predict, model) {
+  data_holdout_w_prediction <- data_to_predict %>%
+    mutate(predicted_price = predict(model, data = data_to_predict))
+  
+  print(ggplot(data_holdout_w_prediction, aes(x = price, y = price - predicted_price)) +
+          geom_point(alpha = 0.15, color = color[3]) +
+          geom_smooth(method = "lm", se = FALSE) +
+          geom_vline(xintercept = median(data_holdout_w_prediction[["price"]]), linetype = "dashed") +
+          theme_bw())
+  
+  print(describe(data_holdout_w_prediction$n_accommodates))
+  
+  ######### create nice summary table of heterogeneity
+  a <- data_holdout_w_prediction %>%
+    mutate(is_low_size = ifelse(n_accommodates <= 3, "small apt", "large apt")) %>%
+    group_by(is_low_size) %>%
+    summarise(
+      rmse = RMSE(predicted_price, price),
+      mean_price = mean(price),
+      rmse_norm = RMSE(predicted_price, price) / mean(price)
+    )
+  
+  
+  b <- data_holdout_w_prediction %>%
+    filter(f_neighbourhood_cleansed %in% c("Westminster", "Camden", "Kensington and Chelsea", "Tower Hamlets", "Newham")) %>%
+    group_by(f_neighbourhood_cleansed) %>%
+    summarise(
+      rmse = RMSE(predicted_price, price),
+      mean_price = mean(price),
+      rmse_norm = rmse / mean_price
+    )
+  
+  c <- data_holdout_w_prediction %>%
+    filter(f_property_type %in% c("Apartment", "House")) %>%
+    group_by(f_property_type) %>%
+    summarise(
+      rmse = RMSE(predicted_price, price),
+      mean_price = mean(price),
+      rmse_norm = rmse / mean_price
+    )
+  
+  
+  d <- data_holdout_w_prediction %>%
+    summarise(
+      rmse = RMSE(predicted_price, price),
+      mean_price = mean(price),
+      rmse_norm = RMSE(predicted_price, price) / mean(price)
+    )
+  
+  # Save output
+  colnames(a) <- c("", "RMSE", "Mean price", "RMSE/price")
+  colnames(b) <- c("", "RMSE", "Mean price", "RMSE/price")
+  colnames(c) <- c("", "RMSE", "Mean price", "RMSE/price")
+  d<- cbind("All", d)
+  colnames(d) <- c("", "RMSE", "Mean price", "RMSE/price")
+  
+  line1 <- c("Type", "", "", "")
+  line2 <- c("Apartment size", "", "", "")
+  line3 <- c("Borough", "", "", "")
+  
+  result_3 <- rbind(line2, a, line1, c, line3, b, d) %>%
+    transform(RMSE = as.numeric(RMSE), `Mean price` = as.numeric(`Mean price`),
+              `RMSE/price` = as.numeric(`RMSE/price`))
+  print(result_3)
+  
+  options(knitr.kable.NA = '')
+  kable(x = result_3, format = "latex", booktabs=TRUE, linesep = "",digits = c(0,2,1,2), col.names = c("","RMSE","Mean price","RMSE/price")) %>%
+    cat(.,file= paste0(output, "performance_across_subsamples.tex"))
+  options(knitr.kable.NA = NULL)
+}
 
-describe(data_holdout_w_prediction$n_accommodates)
-
-######### create nice summary table of heterogeneity
-a <- data_holdout_w_prediction %>%
-  mutate(is_low_size = ifelse(n_accommodates <= 3, "small apt", "large apt")) %>%
-  group_by(is_low_size) %>%
-  summarise(
-    rmse = RMSE(predicted_price, price),
-    mean_price = mean(price),
-    rmse_norm = RMSE(predicted_price, price) / mean(price)
-  )
-
-
-b <- data_holdout_w_prediction %>%
-  filter(f_neighbourhood_cleansed %in% c("Westminster", "Camden", "Kensington and Chelsea", "Tower Hamlets", "Newham")) %>%
-  group_by(f_neighbourhood_cleansed) %>%
-  summarise(
-    rmse = RMSE(predicted_price, price),
-    mean_price = mean(price),
-    rmse_norm = rmse / mean_price
-  )
-
-c <- data_holdout_w_prediction %>%
-  filter(f_property_type %in% c("Apartment", "House")) %>%
-  group_by(f_property_type) %>%
-  summarise(
-    rmse = RMSE(predicted_price, price),
-    mean_price = mean(price),
-    rmse_norm = rmse / mean_price
-  )
-
-
-d <- data_holdout_w_prediction %>%
-  summarise(
-    rmse = RMSE(predicted_price, price),
-    mean_price = mean(price),
-    rmse_norm = RMSE(predicted_price, price) / mean(price)
-  )
-
-# Save output
-colnames(a) <- c("", "RMSE", "Mean price", "RMSE/price")
-colnames(b) <- c("", "RMSE", "Mean price", "RMSE/price")
-colnames(c) <- c("", "RMSE", "Mean price", "RMSE/price")
-d<- cbind("All", d)
-colnames(d) <- c("", "RMSE", "Mean price", "RMSE/price")
-
-line1 <- c("Type", "", "", "")
-line2 <- c("Apartment size", "", "", "")
-line3 <- c("Borough", "", "", "")
-
-result_3 <- rbind(line2, a, line1, c, line3, b, d) %>%
-  transform(RMSE = as.numeric(RMSE), `Mean price` = as.numeric(`Mean price`),
-            `RMSE/price` = as.numeric(`RMSE/price`))
-
-options(knitr.kable.NA = '')
-kable(x = result_3, format = "latex", booktabs=TRUE, linesep = "",digits = c(0,2,1,2), col.names = c("","RMSE","Mean price","RMSE/price")) %>%
-  cat(.,file= paste0(output, "performance_across_subsamples.tex"))
-options(knitr.kable.NA = NULL)
 
 ##########################################
-
+predictwithHoldoutOrOtherData(data_holdout)
 
 
 #########################################################################################
@@ -589,7 +666,7 @@ lasso_coeffs_non_null <- lasso_coeffs[!lasso_coeffs$lasso_coefficient == 0,]
 
 regression_coeffs <- merge(ols_model_coeffs_df, lasso_coeffs_non_null, by = "variable", all=TRUE)
 regression_coeffs %>%
-  saveRDS("regression_coeffs.rds")
+  saveRDS("bristol_londonregression_coeffs.rds")
 
 # CART
 set.seed(1234)
@@ -673,7 +750,7 @@ final_models <-
   )
 
 results <- resamples(final_models) %>% summary()
-
+results
 
 # Save output --------------------------------------------------------
 # Model selection is carried out on this CV RMSE
@@ -684,8 +761,23 @@ result_4 <- imap(final_models, ~{
   rename("CV RMSE" = ".")
 
 kable(x = result_4, format = "latex", digits = 3, booktabs=TRUE, linesep = "") %>%
-  cat(.,file= "horse_race_of_models_cv_rmse.tex")
+  cat(.,file= "bristol_london-horse_race_of_models_cv_rmse.tex")
+
 
 
 # evaluate preferred model on the holdout set -----------------------------
-RMSE(predict(lasso_model, newdata = datahackney), datahackney[["price"]])
+RMSE(predict(cart_model, newdata = data_holdout), data_holdout[["price"]])
+predictwithHoldoutOrOtherData(data_holdout)
+
+
+#### Run for Predicting for Hackney-----------------------------------------
+datahackney <- na.omit(datahackney) %>% mutate(predicted_price = predict(rf_model_2, newdata = na.omit(datahackney)))
+
+RMSE(predict(rf_model_2, newdata = datahackney), datahackney[["price"]])
+predictwithHoldoutOrOtherData(datahackney, rf_model_2)
+
+
+#### RUN for Predicting for Manchester using Bristol + London---------------
+manchester <- readRDS('homework1/airbnb_manchester_workfile_adj.rds')
+
+RMSE(predict(cart_model, data = manchester), manchester[["price"]])

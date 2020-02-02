@@ -83,7 +83,7 @@ myheight_small = 5.625
 mywidth_small = 7.5
 
 # need for knitr::kable
-linesep = if (booktabs) c('', '', '', '', '\\addlinespace') else '\\hline'
+#linesep = if (booktabs) c('', '', '', '', '\\addlinespace') else '\\hline'
 
 
 # ggsave modify - test

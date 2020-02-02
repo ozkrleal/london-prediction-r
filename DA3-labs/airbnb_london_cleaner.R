@@ -17,15 +17,17 @@ rm(list=ls())
 
 #zero step
 getwd()
-data<-read.csv("listings.csv.gz")
+data<-read.csv("manchester/listings.csv.gz")
 drops <- c("host_thumbnail_url","host_picture_url","listing_url","thumbnail_url","medium_url","picture_url","xl_picture_url","host_url","last_scraped","description", "experiences_offered", "neighborhood_overview", "notes", "transit", "access", "interaction", "house_rules", "host_about", "host_response_time", "name", "summary", "space", "host_location")
 data<-data[ , !(names(data) %in% drops)]
-saveRDS(data, file="airbnb_london_listing.rds")
+saveRDS(data, file="airbnb_manchester_listing.rds")
+#saveRDS(data, file="airbnb_london_listing.rds")
 #write.csv(data,file="airbnb_london_listing.csv")
 
 #####################################
 #opening dfset
-df<-readRDS("airbnb_london_listing.rds")
+#df<-readRDS("airbnb_london_listing.rds")
+df<-readRDS("airbnb_manchester_listing.rds")
 
 #drop broken lines - where id is not a character of numbers
 df$junk<-grepl("[[:alpha:]]", df$id)
@@ -51,6 +53,8 @@ for (pricevars in c("price", "weekly_price","monthly_price","security_deposit","
   df[[pricevars]]<-as.numeric(as.character(df[[pricevars]]))
 }
 
+
+
 #format binary variables
 for (binary in c("host_is_superhost","host_has_profile_pic","host_identity_verified","is_location_exact","requires_license","instant_bookable","require_guest_profile_picture","require_guest_phone_verification")){
   df[[binary]][df[[binary]]=="f"] <- 0
@@ -73,4 +77,6 @@ df<-df[ , !(names(df) %in% drops)]
 
 #write csv or RDS
 #write.csv(df,file="airbnb_london_cleaned.csv")
-saveRDS(df,file="airbnb_london_cleaned.rds")
+#saveRDS(df,file="airbnb_london_cleaned.rds")
+saveRDS(df,file="airbnb_manchester_cleaned.rds")
+
