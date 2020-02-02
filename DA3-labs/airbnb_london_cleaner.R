@@ -1,5 +1,4 @@
 # Cleaning London airbnb file
-# v1. Gábor and Kinga 2018.01.10.
 
 # IN data from web
 # out: airbnb_london_cleaned.csv
@@ -8,7 +7,7 @@
 
 #setting working directory
 rm(list=ls())
-setwd("D:/Documents/Data Analysis 3 Prediction and Introduction to Machine Learning/DA3-labs-week-2/DA3-labs/assignment01/raw_data_for_assignment01")
+#setwd("D:/Documents/Data Analysis 3 Prediction and Introduction to Machine Learning/DA3-labs-week-2/DA3-labs/assignment01/raw_data_for_assignment01")
 
 #* need to download
 #* http://data.insideairbnb.com/united-kingdom/england/london/2017-03-04/data/listings.csv.gz
