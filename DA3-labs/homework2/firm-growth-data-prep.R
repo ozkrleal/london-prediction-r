@@ -11,7 +11,7 @@ library(tidyr)
 library(DataExplorer)
 
 # location folders
-data_in <- "homework2/"
+data_in <- "input/"
 output   <- "output/"
 
 
@@ -23,7 +23,8 @@ source("helper_functions/da_helper_functions.R")
 ###########################################################
 # Import data
 ###########################################################
-data <- read_csv(paste(data_in,"cs_bisnode_panel.csv"))
+
+data <- read_csv(paste(data_in,"cs_bisnode_panel.csv", sep = ""))
 
 # drop variables with many NAs
 data <- data %>%
@@ -39,22 +40,12 @@ data <- data %>%
 data <- data %>%
   complete(year, comp_id)
 
+
 # generate status_alive; if sales larger than zero and not-NA, then firm is alive
 data  <- data %>%
   mutate(status_alive = sales > 0 & !is.na(sales) %>%
            as.numeric(.))
 
-# defaults in two years if there are sales in this year but no sales two years later
-data <- data %>%
-  group_by(comp_id) %>%
-  mutate(fastgrowth = (growth >=0.15) %>%
-           as.numeric(.)) %>%
-  ungroup()
-
-data<-data%>%
-  drop_na(fastgrowth)
-
-Hmisc::describe(data$fastgrowth)
 
 # Size and growth
 summary(data$sales) # There will be NAs, we'll drop them soon
@@ -69,6 +60,26 @@ data <- data %>%
   group_by(comp_id) %>%
   mutate(d1_sales_mil_log = sales_mil_log - Lag(sales_mil_log, 1) ) %>%
   ungroup()
+
+#The target variable
+#Step1
+data <- data %>%
+  group_by(comp_id) %>%
+  mutate(growth = (sales_mil/ Lag(sales_mil, 5))^(1/5)-1) %>%
+  ungroup()
+
+# defaults in two years if there are sales in this year but no sales two years later
+#Step2
+data <- data %>%
+  group_by(comp_id) %>%
+  mutate(fastgrowth = (growth >=0.15) %>%
+           as.numeric(.)) %>%
+  ungroup()
+
+data<-data%>%
+  drop_na(fastgrowth)
+
+Hmisc::describe(data$fastgrowth)
 
 # replace w 0 for new firms + add dummy to capture it
 #not actual as we will have a dataset of firms that existed since 2010
@@ -267,8 +278,7 @@ ggplot(data = data, aes(x=d1_sales_mil_log, y=as.numeric(fastgrowth))) +
  geom_point(size=2,  shape=20, stroke=2, fill="blue", color="blue") +
  geom_smooth(method="loess", se=F, colour="black", size=1.5, span=0.9) +
  labs(x = "d1_sales_mil_log",y = "fastgrowth") +
- theme_classic() +
- scale_x_continuous(limits = c(-6,10), breaks = seq(-5,10, 5))
+ theme_classic() 
 
 # generate variables ---------------------------------------------------
 
@@ -305,6 +315,6 @@ skimr::skim(data)
 data <- data %>%
   filter(is.na(exit_year), !is.na(profit_loss_year),!is.na(extra_exp), !is.na(extra_inc), !is.na(extra_profit_loss))
 
-write_csv(data,paste0(output,"bisnode_firms_clean.csv"))
-write_rds(data,paste0(output,"bisnode_firms_clean.rds"))
+#write_csv(data,paste0(output,"bisnode_firms_clean.csv"))
+#write_rds(data,paste0(output,"bisnode_firms_clean.rds"))
 
