@@ -17,7 +17,7 @@ library(labeling)
 
 # location folders
 data_in <- "input/"
-data_out <- "homework2/"
+data_out <- "output/"
 
 data<-read_csv(paste0(data_out,"bisnode_firms_clean.csv"))
 
@@ -32,17 +32,10 @@ data_sales<-data%>%
   filter(sales<1000000)
 # Plot
 ggplot(data, aes(sales))+geom_histogram(color = 'white', fill = 'blue', 
-<<<<<<< HEAD
                                         position = "identity", alpha = 0.6)+
   scale_x_log10(labels=scales::comma)+scale_y_continuous(labels=scales::comma)+
   labs(x="Sales in euro", 
        y = "Frequency (number)")+theme_classic()+facet_wrap(data$fastgrowth)
-=======
-                                              position = "identity", alpha = 0.6, binwidth = 500000)+
-  scale_x_continuous(labels=scales::comma)+scale_y_continuous(labels=scales::comma)+
-labs(x="Sales", 
-     y = "Frequency (number)")+theme_classic()+facet_wrap(data$fastgrowth)
->>>>>>> eac669b64f1fc08d43fed2666d4f9dccf5a6b79b
 
 ggsave("sales_till_mil__hist.png", plot=last_plot())
 
@@ -74,11 +67,6 @@ ggplot(data, aes(profit_loss_year))+geom_histogram( color = 'white', fill = 'blu
 
 ggsave("loss__hist.png", plot=last_plot())
 
-<<<<<<< HEAD
-=======
-introduce(data)
-plot_bar(data)
->>>>>>> eac669b64f1fc08d43fed2666d4f9dccf5a6b79b
 
 ################################################
 # look at some cnts. key vars, functional form #
@@ -103,11 +91,4 @@ ggsave("jittered_assets_bs.png", plot=last_plot())
 
 ## View correlation plot for selected (possibly high importance variables)
 correlationdata <- data %>% select(total_assets_bs, d1_sales_mil_log, age, material_exp, ceo_age, inc_bef_tax, profit_loss_year, sales_mil, personnel_exp)
-<<<<<<< HEAD
 plot_correlation(correlationdata)
-=======
-
-introduce(data)
-
-plot_correlation(correlationdata)
->>>>>>> eac669b64f1fc08d43fed2666d4f9dccf5a6b79b

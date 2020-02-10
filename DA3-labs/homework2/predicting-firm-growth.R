@@ -17,24 +17,15 @@ library(partykit)
 # location folders
 data_in <- "data/"
 data_out <- "data/"
-output   <- "homework2/"
+output   <- "output/"
 
 # load ggplot theme function
-<<<<<<< HEAD
 source("helper_functions/bisnode_helper_functions.R")
 source("helper_functions/theme_bg.R")
-=======
-source("helper_functions/theme_bg.R")
-source("helper_functions/da_helper_functions.R")
-source("homework2/bisnode_helper_functions_edited.R")
-
->>>>>>> eac669b64f1fc08d43fed2666d4f9dccf5a6b79b
 
 # Loading and preparing data ----------------------------------------------
 
 data <- readRDS(paste0(output,"bisnode_firms_clean.rds"))
-
-glimpse(data)
 
 summary(data)
 
@@ -250,7 +241,6 @@ nvars[["LASSO"]] <- sum(lasso_coeffs != 0)
 nvars[["rf"]] <- length(rfvars)
 
 
-<<<<<<< HEAD
 #Choosing model
 model_names <- c("Logit X1","Logit X2","Logit X3",
                  "Logit LASSO","RF")
@@ -259,49 +249,15 @@ summary_results <- data.frame("Number of predictors" = unlist(nvars),
                               "CV RMSE" = unlist(CV_RMSE))
 rownames(summary_results) <- model_names
 summary_results
-=======
-# PART Ib
-# Look at why we need a threshold for classification
-########################################
->>>>>>> eac669b64f1fc08d43fed2666d4f9dccf5a6b79b
 
 # Calibration curve -----------------------------------------------------------
 # how well do estimated vs actual event probabilities relate to each other?
 View(data_holdout$rf_prediction)
 
-<<<<<<< HEAD
 comparison<-as.data.frame(cbind(data_holdout$rf_prediction, data_holdout$fastgrowth))
 colnames(comparison) <- c("predicted", "actual")
 
 #Hmisc::describe(comparison)
-=======
-# a sensible choice: mean of predicted probabilities
-mean_predicted_prob <- mean(data_holdout$LASSO_prediction)
-
-holdout_prediction <-
-  ifelse(data_holdout$LASSO_prediction < mean_predicted_prob, "no_fast", "fast") %>%
-  factor(levels = c("fast", "no_fast"))
-cm_object <- confusionMatrix(holdout_prediction,as.factor(data_holdout$fastgrowth_f))
-cm <- cm_object$table
-cm
-
-# show confusion tables for different thresholds
-thresholds <- seq(0.05, 0.75, by = 0.05)
-
-cm <- list()
-true_positive_rates <- c()
-false_positive_rates <- c()
-for (thr in thresholds) {
-holdout_prediction <- ifelse(data_holdout[,"LASSO_prediction"] < thr, "no_fast", "fast") %>%
-factor(levels = c("fast", "no_fast"))
-cm_thr <- confusionMatrix(holdout_prediction,as.factor(data_holdout$fastgrowth_f))$table
-cm[[as.character(thr)]] <- cm_thr
-true_positive_rates <- c(true_positive_rates, cm_thr["fast", "fast"] /
-                             (cm_thr["fast", "fast"] + cm_thr["no_fast", "fast"]))
-false_positive_rates <- c(false_positive_rates, cm_thr["fast", "no_fast"] /
-                              (cm_thr["fast", "no_fast"] + cm_thr["no_fast", "no_fast"]))
-}
->>>>>>> eac669b64f1fc08d43fed2666d4f9dccf5a6b79b
 
 # order observations according to predicted score from lowest to highest and group them into
 # roughly equally-sized bins
@@ -363,7 +319,7 @@ for (model_name in names(logit_models)) {
     
     roc_obj <- roc(cv_fold$obs, cv_fold$fast,levels = c( "no_fast", "fast"))
     best_treshold <- coords(roc_obj, "best", ret="all", transpose = FALSE,
-                            best.method="youden", best.weights=c(cost, (1-prevelance)))
+                            best.method="youden", best.weights=c(cost, prevelance))
     best_tresholds_cv[[fold]] <- best_treshold$threshold
   }
   
@@ -417,163 +373,14 @@ for (model_name in names(logit_cv_rocs)) {
   createRocPlotWithOptimal(r, best_coords, 
                            paste0(output, model_name, "_roc_plot"))
 }
-<<<<<<< HEAD
-=======
-#View(logit_cv_rocs)
-############################################
-# PART III HAVE
-# ROC and AUC
-# we do not have a loss fn
-############################################
-
-auc <- list()
-
->>>>>>> eac669b64f1fc08d43fed2666d4f9dccf5a6b79b
 
 
-<<<<<<< HEAD
 createLossPlot(roc_obj, best_treshold, paste0(output, "rf_loss_plot"))
 createRocPlotWithOptimal(roc_obj, best_treshold, paste0(output, "rf_roc_plot"))
 
 #str(cv_fold$obs)
 # Summary results ---------------------------------------------------
 
-=======
-#Checking at class
-auc
-
-# Table with models and AUC
-logit_auc <- data.frame("AUC" = unlist(auc))
-
-# Summary table
-expected_loss <- lapply(expected_loss, FUN = function(x) x[1])
-
-logit_results2 <-
-  data.frame("Number of predictors" = unlist(nvars),
-             "Holdout RMSE" = unlist(holdout_RMSE),
-             "Holdout expected loss" = unlist(expected_loss),
-             "AUC" = unlist(auc))
-logit_results2
-
-
-#################################################
-# PREDICTION WITH RANDOM FOREST
-#################################################
-
-
-#################################################
-# Probability forest 
-# Split by gini, ratio of 1's in each tree, average over trees
-#################################################
-
-# 5 fold cross-validation
-
-train_control <- trainControl(
-  method = "cv",
-  n = 5,
-  classProbs = TRUE, # same as probability = TRUE in ranger
-  summaryFunction = twoClassSummaryExtended,
-  savePredictions = TRUE
-)
-train_control$verboseIter <- TRUE
-
-tune_grid <- expand.grid(
-  .mtry = c(5, 6, 7),
-  .splitrule = "gini",
-  .min.node.size = c(10, 15)
-)
-
-# getModelInfo("ranger")
-set.seed(13505)
-
-rf_model_p <- train(
-  formula(paste0("fastgrowth_f ~ ", paste0(rfvars , collapse = " + "))),
-  method = "ranger",
-  data = data_train,
-  tuneGrid = tune_grid,
-  trControl = train_control,
-  importance = "impurity"
-)
-
-plot(varImp(rf_model_p), top=15)
-rf_model_p$results
-
-best_mtry <- rf_model_p$bestTune$mtry
-best_min_node_size <- rf_model_p$bestTune$min.node.size
-
-data_train$rf_p_prediction <-  rf_model_p$finalModel$predictions[,"fast"]
-rf_predicted_probabilities_holdout <- predict(rf_model_p, newdata = data_holdout, type = "prob")
-data_holdout$rf_p_prediction <- rf_predicted_probabilities_holdout[,"fast"]
-
-# performance metrics: ROC curve, RMSE, AUC ------------------------------------
-
-holdout_RMSE[["rf_p"]] <- RMSE(data_holdout$rf_p_prediction, data_holdout$fastgrowth)
-
-rf_holdout_rocs <- list()
-# ROC curve on holdout
-roc_obj_holdout <- roc(data_holdout$fastgrowth, data_holdout$rf_p_prediction)
-rf_holdout_rocs[["rf_p"]] <- roc_obj_holdout
-
-auc[["rf_p"]] <- as.numeric(roc_obj_holdout$auc)
-
-createRocPlot(roc_obj_holdout, paste0(output, "rf_p", "_roc_plotv2"))
-
-# loss fn, threshold search, best threshold, classification, expected loss -----
-
-best_tresholds_cv <- list()
-
-for (fold in c("Fold1", "Fold2", "Fold3", "Fold4", "Fold5")) {
-  cv_fold <- 
-    rf_model_p$pred %>% 
-    filter(mtry == best_mtry,
-           min.node.size == best_min_node_size,
-           Resample == fold)
-  
-  roc_obj <- roc(cv_fold$obs, cv_fold$fast)
-  best_treshold <- coords(roc_obj, "best", ret="all", transpose = FALSE,
-                          best.method="youden", best.weights=c(cost, (1-prevelance)))
-  best_tresholds_cv[[fold]] <- best_treshold$threshold
-}
-
-best_tresholds[["rf_p"]] <- mean(unlist(best_tresholds_cv))
-
-# Get expected loss on holdout
-holdout_treshold <- coords(roc_obj_holdout, x = best_tresholds[["rf_p"]], input= "threshold",
-                           ret="all", transpose = FALSE)
-expected_loss[["rf_p"]] <- (holdout_treshold$fp*FP + holdout_treshold$fn*FN)/length(data_holdout$fastgrowth)
-
-# Create plots - this is for Fold5 currently
-
-createLossPlot(roc_obj, best_treshold, paste0(output, "rf_p_loss_plot"))
-createRocPlotWithOptimal(roc_obj, best_treshold, paste0(output, "rf_p_roc_plot"))
-
-#  Confusion table
-data_holdout$rf_p_prediction_class <- 
-  ifelse(data_holdout$rf_p_prediction > best_tresholds[["rf_p"]], 
-         "fast", "no_fast") %>% 
-  factor(levels = c("fast", "no_fast"))
-
-cm_object3 <- confusionMatrix(data_holdout$rf_p_prediction_class, as.factor(data_holdout$fastgrowth_f))
-cm3 <- cm_object3$table
-cm3
-
-# Summary results ---------------------------------------------------
-
-model_names <- c("Logit X1","Logit X2","Logit X3",
-                 "Logit LASSO","RF probability")
-expected_loss <- lapply(expected_loss, FUN = function(x) x[1])
-nvars[["rf_p"]] <- length(rfvars)
-
-summary_results <- data.frame("Number of predictors" = unlist(nvars),
-           "Holdout RMSE" = unlist(holdout_RMSE),
-           "AUC" = unlist(auc))
-rownames(summary_results) <- model_names
-
-summary_results
-kable(x = summary_results, format = "latex", booktabs=TRUE,  digits = 3, row.names = TRUE,
-      linesep = "", col.names = c("Number of predictors", "Holdout RMSE", "AUC")) %>%
-  cat(.,file= paste0(output, "summary_results.tex"))
->>>>>>> eac669b64f1fc08d43fed2666d4f9dccf5a6b79b
 
 thresholds <- lapply(best_tresholds, FUN = function(x) x[1])
 expected_loss <- lapply(expected_loss, FUN = function(x) x[1])
