@@ -9,6 +9,8 @@ library(dplyr)
 library(tidyr)
 library(DataExplorer)
 library(caret)
+library(rattle)
+
 
 source("helper_functions/theme_bg.R")
 source("helper_functions/da_helper_functions.R")
@@ -149,15 +151,6 @@ data_test <- data[-train_indices, ]
 
 # Define models: simpler, extended -----------------------------------------------------------
 
-# Basic Variables inc neighnourhood
-basic_vars <- c(
-  "offer", "f_offer_cat", "f_city",
-  "f_country","distance", "ln_distance", "f_cancellation_policy", "f_bed_type",
-  "f_neighbourhood_cleansed")
-
-# reviews
-reviews <- c("n_number_of_reviews", "flag_n_number_of_reviews" ,"n_review_scores_rating", "flag_review_scores_rating")
-
 ## Linear Regression
 
 linmod <- lm(ln_price ~ distance + sq_distance + ln_rating_reviewcount, data=data)
@@ -172,17 +165,104 @@ linmod <- lm(ln_price ~ distance + sq_distance + ln_rating_reviewcount, data=dat
 # Regression 3: ln price and num of accomodates
 #linmod5 <- lm(ln_price ~ rating_reviewcount, data=data)
 
+basic_vars <- c(
+  "offer", "f_offer_cat", "f_city",
+  "f_country","distance", "ln_distance", "holiday", "nnights",
+  "ln_distance", "ln_distance_alter", "sq_distance", "stars", "neighbourhood")
+
+# reviews
+rating <- c("rating", "ratingta" ,"ratingta_count","ln_rating", 
+             "rating_reviewcount","ln_rating_reviewcount",  "sq_rating_reviewcount")
+
+predictors <- c(basic_vars, rating)
+
+
+###########################################################################################
+
+# do 5-fold CV
+train_control <- trainControl(method = "cv",
+                              number = 5,
+                              verboseIter = FALSE)
+
+
+# set tuning
+tune_grid <- expand.grid(
+  .mtry = c(7, 9),
+  .splitrule = "variance",
+  .min.node.size = c(5, 10)
+)
+
+
+#proly wont need
+# simpler model for model A (1)
+set.seed(1234)
+system.time({
+  rf_model_1 <- train(
+    formula(paste0("price ~", paste0(predictors, collapse = " + "))),
+    data = data_train,
+    method = "ranger",
+    trControl = train_control,
+    tuneGrid = tune_grid,
+    importance = "impurity",
+    na.action = na.omit
+  )
+})
+rf_model_1
+
+#### OLS
+set.seed(1234)
+system.time({
+  ols_model <- train(
+    formula(paste0("price ~", paste0(predictors, collapse = " + "))),
+    data = data_train,
+    method = "lm",
+    trControl = train_control,
+    na.action = na.omit
+  )
+})
+
+ols_model
+ols_model_coeffs <-  ols_model$finalModel$coefficients
+ols_model_coeffs_df <- data.frame(
+  "variable" = names(ols_model_coeffs),
+  "ols_coefficient" = ols_model_coeffs
+) %>%
+  mutate(variable = gsub("`","",variable))
+
+
 #### CART
 set.seed(1234)
 system.time({
   cart_model <- train(
-    formula(paste0("price ~", paste0(predictors_2, collapse = " + "))),
+    formula(paste0("price ~", paste0(predictors, collapse = " + "))),
     data = data_train,
     method = "rpart",
     tuneLength = 10,
-    trControl = train_control
+    trControl = train_control,
+    na.action = na.omit
   )
 })
 
 fancyRpartPlot(cart_model$finalModel, sub = "")
+cart_model
+
+# GBM  -------------------------------------------------------
+gbm_grid <-  expand.grid(interaction.depth = c(1, 5, 10), # complexity of the tree
+                         n.trees = 250, # number of iterations, i.e. trees
+                         shrinkage = c(0.05, 0.1), # learning rate: how quickly the algorithm adapts
+                         n.minobsinnode = 20 # the minimum number of training set samples in a node to commence splitting
+)
+
+
+set.seed(1234)
+system.time({
+  gbm_model <- train(formula(paste0("price ~", paste0(predictors, collapse = " + "))),
+                     data = data_train,
+                     method = "gbm",
+                     trControl = train_control,
+                     verbose = FALSE,
+                     tuneGrid = gbm_grid,
+                     na.action = na.omit)
+})
+gbm_model
 
