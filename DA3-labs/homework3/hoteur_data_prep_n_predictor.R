@@ -24,7 +24,7 @@ data <- data %>% filter(city %in% c('Berlin', 'Munich', 'Vienna', 'Budapest', 'P
 
 data <- data %>% filter(year == 2017 & month == 11 & weekend == 0 & accommodation_type == "Hotel")
 
-data <- data %>% select(- c(year, month, weekend, accommodation_type, city_actual))
+data <- data %>% select(- c(year, month, weekend, accommodation_type, city_actual, neighbourhood))
 data <- data %>% select(- c(center1label, center2label))
 
 
@@ -71,9 +71,9 @@ data <- data %>%
   mutate(ln_distance = log(distance),
          ln_distance_alter = log(distance_alter))
 
-data <- data %>%
-  mutate(sq_distance = distance^2,
-         sq_rating_reviewcount = rating_reviewcount^2)
+#data <- data %>%
+#  mutate(sq_distance = distance^2,
+#         sq_rating_reviewcount = rating_reviewcount^2)
 
 DataExplorer::plot_scatterplot(split_columns(data)$continuous, by = "ln_price", sampled_rows = 1000L)
 
@@ -81,7 +81,7 @@ ggplot(data, aes(price)) + geom_histogram(binwidth = 50) + theme_bg()
 ggplot(data, aes(ln_price)) + geom_histogram(binwidth = 0.25) + theme_bg()
 
 #removing outliers
-data <- data %>% filter(price <= 1000)
+data <- data %>% filter(price <= 500)
 
 ##### Regression Analysis
 
@@ -153,7 +153,7 @@ data_test <- data[-train_indices, ]
 
 ## Linear Regression
 
-linmod <- lm(ln_price ~ distance + sq_distance + ln_rating_reviewcount, data=data)
+linmod <- lm(ln_price ~ distance + rating + stars + rating_reviewcount, data=data)
 # Regression 2: ln price and log num of rat
 #linmod2 <- lm(ln_price ~ ln_distance, data=data)
 # Regression 3: ln price and num of accomodates
@@ -168,12 +168,13 @@ linmod <- lm(ln_price ~ distance + sq_distance + ln_rating_reviewcount, data=dat
 basic_vars <- c(
   "offer", "f_offer_cat", "f_city",
   "f_country","distance", "ln_distance", "holiday", "nnights",
-  "ln_distance", "ln_distance_alter", "sq_distance", "stars", "neighbourhood")
+  "ln_distance", "ln_distance_alter", "stars")
 
 # reviews
-rating <- c("rating", "ratingta" ,"ratingta_count","ln_rating", 
-             "rating_reviewcount","ln_rating_reviewcount",  "sq_rating_reviewcount")
+rating <- c("rating", "ratingta" ,"ratingta_count","ln_rating_reviewcount", 
+             "rating_reviewcount","ln_ratingta_count")
 
+predictormodforest <- basic_vars
 predictors <- c(basic_vars, rating)
 
 
@@ -185,31 +186,7 @@ train_control <- trainControl(method = "cv",
                               verboseIter = FALSE)
 
 
-# set tuning
-tune_grid <- expand.grid(
-  .mtry = c(7, 9),
-  .splitrule = "variance",
-  .min.node.size = c(5, 10)
-)
-
-
-#proly wont need
-# simpler model for model A (1)
-set.seed(1234)
-system.time({
-  rf_model_1 <- train(
-    formula(paste0("price ~", paste0(predictors, collapse = " + "))),
-    data = data_train,
-    method = "ranger",
-    trControl = train_control,
-    tuneGrid = tune_grid,
-    importance = "impurity",
-    na.action = na.omit
-  )
-})
-rf_model_1
-
-#### OLS
+#### Linear Regression
 set.seed(1234)
 system.time({
   ols_model <- train(
@@ -222,13 +199,6 @@ system.time({
 })
 
 ols_model
-ols_model_coeffs <-  ols_model$finalModel$coefficients
-ols_model_coeffs_df <- data.frame(
-  "variable" = names(ols_model_coeffs),
-  "ols_coefficient" = ols_model_coeffs
-) %>%
-  mutate(variable = gsub("`","",variable))
-
 
 #### CART
 set.seed(1234)
@@ -242,11 +212,56 @@ system.time({
     na.action = na.omit
   )
 })
-
-fancyRpartPlot(cart_model$finalModel, sub = "")
 cart_model
+fancyRpartPlot(cart_model$finalModel, sub = "", palettes = "Reds", type = 2, cex = 0.7)
 
-# GBM  -------------------------------------------------------
+
+#### RANDOM FOREST-------------------------------------------------------
+# set tuning
+tune_grid <- expand.grid(
+  .mtry = c(7, 9),
+  .splitrule = "variance",
+  .min.node.size = c(5, 10)
+)
+
+set.seed(1234)
+system.time({
+  rf_model_1 <- train(
+    formula(paste0("price ~", paste0(predictormodforest, collapse = " + "))),
+    data = data_train,
+    method = "ranger",
+    trControl = train_control,
+    tuneGrid = tune_grid,
+    importance = "impurity",
+    na.action = na.omit
+  )
+})
+rf_model_1
+
+
+# set tuning for benchamrk model (2)
+tune_grid <- expand.grid(
+  .mtry = c(10, 12),
+  .splitrule = "variance",
+  .min.node.size = c(5, 10)
+)
+
+set.seed(1234)
+system.time({
+  rf_model_2 <- train(
+    formula(paste0("price ~", paste0(predictors, collapse = " + "))),
+    data = data_train,
+    method = "ranger",
+    trControl = train_control,
+    tuneGrid = tune_grid,
+    importance = "impurity",
+    na.action = na.omit
+  )
+})
+rf_model_2
+
+
+#### GBM  -------------------------------------------------------
 gbm_grid <-  expand.grid(interaction.depth = c(1, 5, 10), # complexity of the tree
                          n.trees = 250, # number of iterations, i.e. trees
                          shrinkage = c(0.05, 0.1), # learning rate: how quickly the algorithm adapts
@@ -262,7 +277,29 @@ system.time({
                      trControl = train_control,
                      verbose = FALSE,
                      tuneGrid = gbm_grid,
-                     na.action = na.omit)
+                     na.action = na.pass)
 })
 gbm_model
+
+final_models <-
+  list("OLS" = ols_model,
+       "CART" = cart_model,
+       "Random forest (smaller model)" = rf_model_1,
+       "Random forest" = rf_model_2,
+       "GBM (basic tuning)"  = gbm_model
+  )
+
+results <- resamples(final_models) %>% summary()
+results
+### PREDICTIONS
+
+rmses <- 
+  list("OLS" = RMSE(predict(ols_model, newdata = data_test), data_test[["price"]]),
+       "CART" = RMSE(predict(cart_model, newdata = data_test), data_test[["price"]]),
+       "Random forest (smaller model)" = RMSE(predict(rf_model_1, newdata = data_test), data_test[["price"]]),
+       "Random forest" = RMSE(predict(rf_model_2, newdata = data_test), data_test[["price"]]),
+       "GBM (basic tuning)"  = RMSE(predict(gbm_model, newdata = data_test), data_test[["price"]])
+  )
+
+rmses
 
